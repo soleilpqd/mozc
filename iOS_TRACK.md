@@ -1,0 +1,3 @@
+- New folder: **Mozc** contains XCode iOS framework project.
+- Build Mozc for MacOSX, then copy files: **character_set.h**, **version_def.h** from build folder into **src/base**.
+- Comment out unavailable source code in **mac_process.mm**, **mac_util.mm**.
