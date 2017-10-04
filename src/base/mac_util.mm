@@ -30,10 +30,11 @@
 #import "base/mac_util.h"
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-#include <launch.h>
+//#include <launch.h>
 #include <CoreFoundation/CoreFoundation.h>
-#include <IOKit/IOKitLib.h>
+//#include <IOKit/IOKitLib.h>
 
 #include "base/const.h"
 #include "base/logging.h"
@@ -56,13 +57,14 @@ const char kProjectPrefix[] =
 const char kProjectPrefix[] =
     "org.mozc.inputmethod.Japanese.";
 #else
-#error Unknown branding
+const char kProjectPrefix[] =
+    "vn.gzr.mozc.";
 #endif
 
 // Returns the reference of prelauncher login item.
 // If the prelauncher login item does not exist this function returns nullptr.
 // Otherwise you must release the reference.
-LSSharedFileListItemRef GetPrelauncherLoginItem() {
+/*LSSharedFileListItemRef GetPrelauncherLoginItem() {
   LSSharedFileListItemRef prelauncher_item = nullptr;
   scoped_cftyperef<CFURLRef> url(
     CFURLCreateFromFileSystemRepresentation(
@@ -115,7 +117,7 @@ LSSharedFileListItemRef GetPrelauncherLoginItem() {
   }
 
   return prelauncher_item;
-}
+}*/
 
 string GetSearchPathForDirectoriesInDomains(NSSearchPathDirectory directory) {
   string dir;
@@ -186,176 +188,182 @@ string MacUtil::GetResourcesDirectory() {
 }
 
 string MacUtil::GetSerialNumber() {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  // Please refer to TN1103 for the details
-  // http://developer.apple.com/library/mac/#technotes/tn/tn1103.html
-  string result;
-  io_service_t platformExpert = IOServiceGetMatchingService(
-      kIOMasterPortDefault, IOServiceMatching("IOPlatformExpertDevice"));
-
-  if (platformExpert) {
-    CFTypeRef serialNumberAsCFString =
-        IORegistryEntryCreateCFProperty(
-            platformExpert, CFSTR(kIOPlatformSerialNumberKey),
-            kCFAllocatorDefault, 0);
-    if (serialNumberAsCFString) {
-      const NSString *serialNumberNSString = reinterpret_cast<const NSString *>(
-          serialNumberAsCFString);
-      result.assign([serialNumberNSString UTF8String]);
+    NSUUID *uuid = [UIDevice currentDevice].identifierForVendor;
+    if (uuid != nil) {
+        return string([uuid.UUIDString UTF8String]);
     }
-
-    IOObjectRelease(platformExpert);
-  }
-
-  [pool drain];
+//  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+//  // Please refer to TN1103 for the details
+//  // http://developer.apple.com/library/mac/#technotes/tn/tn1103.html
+  string result;
+//  io_service_t platformExpert = IOServiceGetMatchingService(
+//      kIOMasterPortDefault, IOServiceMatching("IOPlatformExpertDevice"));
+//
+//  if (platformExpert) {
+//    CFTypeRef serialNumberAsCFString =
+//        IORegistryEntryCreateCFProperty(
+//            platformExpert, CFSTR(kIOPlatformSerialNumberKey),
+//            kCFAllocatorDefault, 0);
+//    if (serialNumberAsCFString) {
+//      const NSString *serialNumberNSString = reinterpret_cast<const NSString *>(
+//          serialNumberAsCFString);
+//      result.assign([serialNumberNSString UTF8String]);
+//    }
+//
+//    IOObjectRelease(platformExpert);
+//  }
+//
+//  [pool drain];
   // Return the empty string if failed.
   return result;
 }
 
 bool MacUtil::StartLaunchdService(const string &service_name,
                                   pid_t *pid) {
-  int dummy_pid = 0;
-  if (pid == nullptr) {
-    pid = &dummy_pid;
-  }
-  const string label = GetLabelForSuffix(service_name);
-
-  launch_data_t start_renderer_command =
-      launch_data_alloc(LAUNCH_DATA_DICTIONARY);
-  launch_data_dict_insert(start_renderer_command,
-                          launch_data_new_string(label.c_str()),
-                          LAUNCH_KEY_STARTJOB);
-  launch_data_t result_data = launch_msg(start_renderer_command);
-  launch_data_free(start_renderer_command);
-  if (result_data == nullptr) {
-    LOG(ERROR) << "Failed to launch the specified service";
+//  int dummy_pid = 0;
+//  if (pid == nullptr) {
+//    pid = &dummy_pid;
+//  }
+//  const string label = GetLabelForSuffix(service_name);
+//
+//  launch_data_t start_renderer_command =
+//      launch_data_alloc(LAUNCH_DATA_DICTIONARY);
+//  launch_data_dict_insert(start_renderer_command,
+//                          launch_data_new_string(label.c_str()),
+//                          LAUNCH_KEY_STARTJOB);
+//  launch_data_t result_data = launch_msg(start_renderer_command);
+//  launch_data_free(start_renderer_command);
+//  if (result_data == nullptr) {
+//    LOG(ERROR) << "Failed to launch the specified service";
+//    return false;
+//  }
+//  launch_data_free(result_data);
+//
+//  // Getting PID by using launch_msg API.
+//  launch_data_t get_renderer_info =
+//      launch_data_alloc(LAUNCH_DATA_DICTIONARY);
+//  launch_data_dict_insert(get_renderer_info,
+//                          launch_data_new_string(label.c_str()),
+//                          LAUNCH_KEY_GETJOB);
+//  launch_data_t renderer_info = launch_msg(get_renderer_info);
+//  launch_data_free(get_renderer_info);
+//  if (renderer_info == nullptr) {
+//    LOG(ERROR) << "Unexpected error: launchd doesn't return the data "
+//               << "for the service.";
+//    return false;
+//  }
+//
+//  launch_data_t pid_data = launch_data_dict_lookup(
+//      renderer_info, LAUNCH_JOBKEY_PID);
+//  if (pid_data == nullptr) {
+//    LOG(ERROR) <<
+//        "Unexpected error: launchd response doesn't have PID";
+//    launch_data_free(renderer_info);
+//    return false;
+//  }
+//  *pid = launch_data_get_integer(pid_data);
+//  launch_data_free(renderer_info);
+//  return true;
     return false;
-  }
-  launch_data_free(result_data);
-
-  // Getting PID by using launch_msg API.
-  launch_data_t get_renderer_info =
-      launch_data_alloc(LAUNCH_DATA_DICTIONARY);
-  launch_data_dict_insert(get_renderer_info,
-                          launch_data_new_string(label.c_str()),
-                          LAUNCH_KEY_GETJOB);
-  launch_data_t renderer_info = launch_msg(get_renderer_info);
-  launch_data_free(get_renderer_info);
-  if (renderer_info == nullptr) {
-    LOG(ERROR) << "Unexpected error: launchd doesn't return the data "
-               << "for the service.";
-    return false;
-  }
-
-  launch_data_t pid_data = launch_data_dict_lookup(
-      renderer_info, LAUNCH_JOBKEY_PID);
-  if (pid_data == nullptr) {
-    LOG(ERROR) <<
-        "Unexpected error: launchd response doesn't have PID";
-    launch_data_free(renderer_info);
-    return false;
-  }
-  *pid = launch_data_get_integer(pid_data);
-  launch_data_free(renderer_info);
-  return true;
 }
 
 bool MacUtil::CheckPrelauncherLoginItemStatus() {
-  scoped_cftyperef<LSSharedFileListItemRef> prelauncher_item(
-      GetPrelauncherLoginItem());
-  return (prelauncher_item.get() != nullptr);
+//  scoped_cftyperef<LSSharedFileListItemRef> prelauncher_item(
+//      GetPrelauncherLoginItem());
+//  return (prelauncher_item.get() != nullptr);
+    return false;
 }
 
 void MacUtil::RemovePrelauncherLoginItem() {
-  scoped_cftyperef<LSSharedFileListItemRef> prelauncher_item(
-      GetPrelauncherLoginItem());
-
-  if (!prelauncher_item.get()) {
-    DLOG(INFO) << "prelauncher_item not found.  Probably not registered yet.";
-    return;
-  }
-  scoped_cftyperef<LSSharedFileListRef> login_items(
-      LSSharedFileListCreate(
-          kCFAllocatorDefault, kLSSharedFileListSessionLoginItems, nullptr));
-  if (!login_items.get()) {
-    LOG(ERROR) << "LSSharedFileListCreate error: Cannot get the login items.";
-    return;
-  }
-  LSSharedFileListItemRemove(login_items.get(), prelauncher_item.get());
+//  scoped_cftyperef<LSSharedFileListItemRef> prelauncher_item(
+//      GetPrelauncherLoginItem());
+//
+//  if (!prelauncher_item.get()) {
+//    DLOG(INFO) << "prelauncher_item not found.  Probably not registered yet.";
+//    return;
+//  }
+//  scoped_cftyperef<LSSharedFileListRef> login_items(
+//      LSSharedFileListCreate(
+//          kCFAllocatorDefault, kLSSharedFileListSessionLoginItems, nullptr));
+//  if (!login_items.get()) {
+//    LOG(ERROR) << "LSSharedFileListCreate error: Cannot get the login items.";
+//    return;
+//  }
+//  LSSharedFileListItemRemove(login_items.get(), prelauncher_item.get());
 }
 
 void MacUtil::AddPrelauncherLoginItem() {
-  if (CheckPrelauncherLoginItemStatus()) {
-    return;
-  }
-  scoped_cftyperef<LSSharedFileListRef> login_items(
-      LSSharedFileListCreate(
-          kCFAllocatorDefault, kLSSharedFileListSessionLoginItems, nullptr));
-  if (!login_items.get()) {
-    LOG(ERROR) << "LSSharedFileListCreate error: Cannot get the login items.";
-    return;
-  }
-  scoped_cftyperef<CFURLRef> url(
-    CFURLCreateFromFileSystemRepresentation(
-        kCFAllocatorDefault, kPrelauncherPath,
-        strlen((const char *)kPrelauncherPath), true));
-
-  if (!url.get()) {
-    LOG(ERROR) << "CFURLCreateFromFileSystemRepresentation error:"
-               << " Cannot create CFURL object.";
-    return;
-  }
-  scoped_cftyperef<LSSharedFileListItemRef> new_item(
-      LSSharedFileListInsertItemURL(
-          login_items.get(), kLSSharedFileListItemLast, nullptr, nullptr, url.get(),
-          nullptr, nullptr));
-  if (!new_item.get()) {
-    LOG(ERROR) << "LSSharedFileListInsertItemURL error:"
-               << " Cannot insert the prelauncher to the login items.";
-    return;
-  }
+//  if (CheckPrelauncherLoginItemStatus()) {
+//    return;
+//  }
+//  scoped_cftyperef<LSSharedFileListRef> login_items(
+//      LSSharedFileListCreate(
+//          kCFAllocatorDefault, kLSSharedFileListSessionLoginItems, nullptr));
+//  if (!login_items.get()) {
+//    LOG(ERROR) << "LSSharedFileListCreate error: Cannot get the login items.";
+//    return;
+//  }
+//  scoped_cftyperef<CFURLRef> url(
+//    CFURLCreateFromFileSystemRepresentation(
+//        kCFAllocatorDefault, kPrelauncherPath,
+//        strlen((const char *)kPrelauncherPath), true));
+//
+//  if (!url.get()) {
+//    LOG(ERROR) << "CFURLCreateFromFileSystemRepresentation error:"
+//               << " Cannot create CFURL object.";
+//    return;
+//  }
+//  scoped_cftyperef<LSSharedFileListItemRef> new_item(
+//      LSSharedFileListInsertItemURL(
+//          login_items.get(), kLSSharedFileListItemLast, nullptr, nullptr, url.get(),
+//          nullptr, nullptr));
+//  if (!new_item.get()) {
+//    LOG(ERROR) << "LSSharedFileListInsertItemURL error:"
+//               << " Cannot insert the prelauncher to the login items.";
+//    return;
+//  }
 }
 
 bool MacUtil::GetFrontmostWindowNameAndOwner(string *name, string *owner) {
-  DCHECK(name);
-  DCHECK(owner);
-  scoped_cftyperef<CFArrayRef> window_list(
-      ::CGWindowListCopyWindowInfo(
-          kCGWindowListOptionOnScreenOnly | kCGWindowListExcludeDesktopElements,
-          kCGNullWindowID));
-  const CFIndex window_count = CFArrayGetCount(window_list.get());
-  for (CFIndex i = 0; i < window_count; ++i) {
-    const NSDictionary *window_data = static_cast<const NSDictionary *>(
-        CFArrayGetValueAtIndex(window_list.get(), i));
-    if ([[window_data objectForKey:(id)kCGWindowSharingState] intValue] ==
-        kCGWindowSharingNone) {
-      // Skips not shared window.
-      continue;
-    }
-    NSString *window_name = [window_data objectForKey:(id)kCGWindowName];
-    NSString *owner_name =
-      [window_data objectForKey:(id)kCGWindowOwnerName];
-    NSNumber *window_layer = [window_data objectForKey:(id)kCGWindowLayer];
-
-    if ((window_name == nil) || (owner_name == nil) || (window_layer == nil)) {
-      continue;
-    }
-    // Ignores the windows which aren't normal window level.
-    if ([window_layer intValue] != kCGNormalWindowLevel) {
-      continue;
-    }
-
-    // Hack to ignore the window (name == "" and owner == "Google Chrome")
-    // Chrome browser seems to create a window which has no name in front of the
-    // actual frontmost Chrome window.
-    if ([window_name isEqualToString:@""] &&
-        [owner_name isEqualToString:@"Google Chrome"]) {
-      continue;
-    }
-    name->assign([window_name UTF8String]);
-    owner->assign([owner_name UTF8String]);
-    return true;
-  }
+//  DCHECK(name);
+//  DCHECK(owner);
+//  scoped_cftyperef<CFArrayRef> window_list(
+//      ::CGWindowListCopyWindowInfo(
+//          kCGWindowListOptionOnScreenOnly | kCGWindowListExcludeDesktopElements,
+//          kCGNullWindowID));
+//  const CFIndex window_count = CFArrayGetCount(window_list.get());
+//  for (CFIndex i = 0; i < window_count; ++i) {
+//    const NSDictionary *window_data = static_cast<const NSDictionary *>(
+//        CFArrayGetValueAtIndex(window_list.get(), i));
+//    if ([[window_data objectForKey:(id)kCGWindowSharingState] intValue] ==
+//        kCGWindowSharingNone) {
+//      // Skips not shared window.
+//      continue;
+//    }
+//    NSString *window_name = [window_data objectForKey:(id)kCGWindowName];
+//    NSString *owner_name =
+//      [window_data objectForKey:(id)kCGWindowOwnerName];
+//    NSNumber *window_layer = [window_data objectForKey:(id)kCGWindowLayer];
+//
+//    if ((window_name == nil) || (owner_name == nil) || (window_layer == nil)) {
+//      continue;
+//    }
+//    // Ignores the windows which aren't normal window level.
+//    if ([window_layer intValue] != kCGNormalWindowLevel) {
+//      continue;
+//    }
+//
+//    // Hack to ignore the window (name == "" and owner == "Google Chrome")
+//    // Chrome browser seems to create a window which has no name in front of the
+//    // actual frontmost Chrome window.
+//    if ([window_name isEqualToString:@""] &&
+//        [owner_name isEqualToString:@"Google Chrome"]) {
+//      continue;
+//    }
+//    name->assign([window_name UTF8String]);
+//    owner->assign([owner_name UTF8String]);
+//    return true;
+//  }
   return false;
 }
 

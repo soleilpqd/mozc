@@ -29,7 +29,8 @@
 
 #import "base/mac_process.h"
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #include "base/const.h"
 #include "base/logging.h"
@@ -42,7 +43,6 @@ const char kFileSchema[] = "file://";
 }  // namespace
 
 bool MacProcess::OpenBrowserForMac(const string &url) {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
   bool success = false;
   NSURL *nsURL = nil;
   if (url.find(kFileSchema) == 0) {
@@ -59,30 +59,21 @@ bool MacProcess::OpenBrowserForMac(const string &url) {
     nsURL = [NSURL URLWithString:nsStr];
   }
   if (nsURL) {
-    success = [[NSWorkspace sharedWorkspace] openURL:nsURL];
+      success = [[UIApplication sharedApplication] openURL:nsURL];
   } else {
     DLOG(ERROR) << "NSURL is not initialized";
   }
-  [pool drain];
   return success;
 }
 
 bool MacProcess::OpenApplication(const string &path) {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  NSString *nsStr = [[NSString alloc] initWithBytes:path.data()
-                                      length:path.size()
-                                      encoding:NSUTF8StringEncoding];
-  [[NSWorkspace sharedWorkspace] launchApplication:nsStr];
-  [pool drain];
-  return true;
+    return false;
 }
 
 namespace {
 bool LaunchMozcToolInternal(const string &tool_name, const string &error_type) {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
   // FLAGS_error_type is used where FLAGS_mode is "error_message_dialog".
-  setenv("FLAGS_error_type", error_type.c_str(), 1);
+//  setenv("FLAGS_error_type", error_type.c_str(), 1);
 
   // If normal expected tool_name is specified, we invoke specific application.
   NSString *appName = nil;
@@ -103,23 +94,20 @@ bool LaunchMozcToolInternal(const string &tool_name, const string &error_type) {
   }
 
   // The Mozc Tool apps reside in the same directory where the mozc server does.
-  NSString *toolAppPath =
-      [NSString stringWithUTF8String:MacUtil::GetServerDirectory().c_str()];
+//  NSString *toolAppPath =
+//      [NSString stringWithUTF8String:MacUtil::GetServerDirectory().c_str()];
+//
+//  if (appName != nil) {
+//    toolAppPath = [toolAppPath stringByAppendingPathComponent:appName];
+//  } else {
+//    // Otherwise, we tries to invoke the application by settings FLAGS_mode.
+//    // use --fromenv option to specify tool name
+//    setenv("FLAGS_mode", tool_name.c_str(), 1);
+//    toolAppPath = [toolAppPath
+//                    stringByAppendingPathComponent:@ kProductPrefix "Tool.app"];
+//  }
 
-  if (appName != nil) {
-    toolAppPath = [toolAppPath stringByAppendingPathComponent:appName];
-  } else {
-    // Otherwise, we tries to invoke the application by settings FLAGS_mode.
-    // use --fromenv option to specify tool name
-    setenv("FLAGS_mode", tool_name.c_str(), 1);
-    toolAppPath = [toolAppPath
-                    stringByAppendingPathComponent:@ kProductPrefix "Tool.app"];
-  }
-
-  bool succeeded =
-      [[NSWorkspace sharedWorkspace] launchApplication:toolAppPath];
-  [pool drain];
-  return succeeded;
+  return false;
 }
 }  // namespace
 
