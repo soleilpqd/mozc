@@ -7,4 +7,5 @@
   - From **out_mac/Release/gen/proto_out/usage_stats** into **usage_stats**.
   - From **out_mac/Release/gen/proto_out/data_manager** into **data_manager**.
   - From **out_mac/Release/gen/proto_out/prediction** into **prediction**.
+  - From **out_mac/Release/gen/proto_out/ipc** into **ipc**.
 - Comment out unavailable source code in **mac_process.mm**, **mac_util.mm**.
