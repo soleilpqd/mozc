@@ -216,6 +216,10 @@
 		2B8498541F862F390080EC7E /* character_form_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498511F862F390080EC7E /* character_form_manager.cc */; };
 		2B8498551F862F390080EC7E /* config_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498521F862F390080EC7E /* config_handler.cc */; };
 		2B8498561F862F390080EC7E /* stats_config_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498531F862F390080EC7E /* stats_config_util.cc */; };
+		2B84985C1F8631530080EC7E /* composer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498581F8631530080EC7E /* composer.cc */; };
+		2B84985D1F8631530080EC7E /* key_event_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498591F8631530080EC7E /* key_event_util.cc */; };
+		2B84985E1F8631530080EC7E /* key_parser.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84985A1F8631530080EC7E /* key_parser.cc */; };
+		2B84985F1F8631530080EC7E /* table.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84985B1F8631530080EC7E /* table.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -468,6 +472,10 @@
 		2B8498511F862F390080EC7E /* character_form_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = character_form_manager.cc; path = ../../src/config/character_form_manager.cc; sourceTree = "<group>"; };
 		2B8498521F862F390080EC7E /* config_handler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = config_handler.cc; path = ../../src/config/config_handler.cc; sourceTree = "<group>"; };
 		2B8498531F862F390080EC7E /* stats_config_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stats_config_util.cc; path = ../../src/config/stats_config_util.cc; sourceTree = "<group>"; };
+		2B8498581F8631530080EC7E /* composer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = composer.cc; path = ../../src/composer/composer.cc; sourceTree = "<group>"; };
+		2B8498591F8631530080EC7E /* key_event_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = key_event_util.cc; path = ../../src/composer/key_event_util.cc; sourceTree = "<group>"; };
+		2B84985A1F8631530080EC7E /* key_parser.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = key_parser.cc; path = ../../src/composer/key_parser.cc; sourceTree = "<group>"; };
+		2B84985B1F8631530080EC7E /* table.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = table.cc; path = ../../src/composer/table.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -547,6 +555,7 @@
 			children = (
 				2B47F2C41F84D395004E45CD /* base */,
 				2B8498501F862E7F0080EC7E /* config */,
+				2B8498571F8631260080EC7E /* composer */,
 			);
 			name = src;
 			path = ../Mozc;
@@ -901,6 +910,17 @@
 			name = config;
 			sourceTree = "<group>";
 		};
+		2B8498571F8631260080EC7E /* composer */ = {
+			isa = PBXGroup;
+			children = (
+				2B8498581F8631530080EC7E /* composer.cc */,
+				2B8498591F8631530080EC7E /* key_event_util.cc */,
+				2B84985A1F8631530080EC7E /* key_parser.cc */,
+				2B84985B1F8631530080EC7E /* table.cc */,
+			);
+			name = composer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1051,10 +1071,13 @@
 				2B84983C1F862DB30080EC7E /* process_mutex.cc in Sources */,
 				2B8498461F862DB30080EC7E /* system_util.cc in Sources */,
 				2B84982F1F862DB30080EC7E /* hash.cc in Sources */,
+				2B84985D1F8631530080EC7E /* key_event_util.cc in Sources */,
 				2B8498371F862DB30080EC7E /* mutex.cc in Sources */,
 				2B8498421F862DB30080EC7E /* serialized_string_array.cc in Sources */,
 				2B8498491F862DB30080EC7E /* unnamed_event.cc in Sources */,
+				2B84985F1F8631530080EC7E /* table.cc in Sources */,
 				2B8498351F862DB30080EC7E /* mmap.cc in Sources */,
+				2B84985C1F8631530080EC7E /* composer.cc in Sources */,
 				2B84982A1F862DB30080EC7E /* debug.cc in Sources */,
 				2B8498291F862DB30080EC7E /* crash_report_handler.cc in Sources */,
 				2B84982B1F862DB30080EC7E /* encryptor.cc in Sources */,
@@ -1075,6 +1098,7 @@
 				2B8498361F862DB30080EC7E /* multifile.cc in Sources */,
 				2B8498411F862DB30080EC7E /* scoped_handle.cc in Sources */,
 				2B84983A1F862DB30080EC7E /* pepper_file_system_mock.cc in Sources */,
+				2B84985E1F8631530080EC7E /* key_parser.cc in Sources */,
 				2B8498401F862DB30080EC7E /* scheduler.cc in Sources */,
 				2B8498281F862DB30080EC7E /* cpu_stats.cc in Sources */,
 				2B84984C1F862DB30080EC7E /* update_util.cc in Sources */,
