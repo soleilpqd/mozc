@@ -269,6 +269,11 @@
 		2B84992D1F864B860080EC7E /* http_client.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499261F864B860080EC7E /* http_client.cc */; };
 		2B84992E1F864B860080EC7E /* json_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499271F864B860080EC7E /* json_util.cc */; };
 		2B84992F1F864B860080EC7E /* jsonpath.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499281F864B860080EC7E /* jsonpath.cc */; };
+		2B8499371F864DAF0080EC7E /* dictionary_predictor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499321F864DAF0080EC7E /* dictionary_predictor.cc */; };
+		2B8499381F864DAF0080EC7E /* predictor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499331F864DAF0080EC7E /* predictor.cc */; };
+		2B8499391F864DAF0080EC7E /* suggestion_filter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499341F864DAF0080EC7E /* suggestion_filter.cc */; };
+		2B84993A1F864DAF0080EC7E /* user_history_predictor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499351F864DAF0080EC7E /* user_history_predictor.cc */; };
+		2B84993B1F864DAF0080EC7E /* user_history_predictor.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499361F864DAF0080EC7E /* user_history_predictor.pb.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -574,6 +579,11 @@
 		2B8499261F864B860080EC7E /* http_client.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_client.cc; path = ../../src/net/http_client.cc; sourceTree = "<group>"; };
 		2B8499271F864B860080EC7E /* json_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_util.cc; path = ../../src/net/json_util.cc; sourceTree = "<group>"; };
 		2B8499281F864B860080EC7E /* jsonpath.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jsonpath.cc; path = ../../src/net/jsonpath.cc; sourceTree = "<group>"; };
+		2B8499321F864DAF0080EC7E /* dictionary_predictor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dictionary_predictor.cc; path = ../../src/prediction/dictionary_predictor.cc; sourceTree = "<group>"; };
+		2B8499331F864DAF0080EC7E /* predictor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = predictor.cc; path = ../../src/prediction/predictor.cc; sourceTree = "<group>"; };
+		2B8499341F864DAF0080EC7E /* suggestion_filter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = suggestion_filter.cc; path = ../../src/prediction/suggestion_filter.cc; sourceTree = "<group>"; };
+		2B8499351F864DAF0080EC7E /* user_history_predictor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_history_predictor.cc; path = ../../src/prediction/user_history_predictor.cc; sourceTree = "<group>"; };
+		2B8499361F864DAF0080EC7E /* user_history_predictor.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_history_predictor.pb.cc; path = ../../src/prediction/user_history_predictor.pb.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -661,6 +671,7 @@
 				2B84990E1F8648D40080EC7E /* handwriting */,
 				2B8499151F864A1D0080EC7E /* ipc */,
 				2B8499221F864B580080EC7E /* net */,
+				2B8499311F864D840080EC7E /* prediction */,
 			);
 			name = src;
 			path = ../Mozc;
@@ -1124,6 +1135,18 @@
 			name = net;
 			sourceTree = "<group>";
 		};
+		2B8499311F864D840080EC7E /* prediction */ = {
+			isa = PBXGroup;
+			children = (
+				2B8499321F864DAF0080EC7E /* dictionary_predictor.cc */,
+				2B8499331F864DAF0080EC7E /* predictor.cc */,
+				2B8499341F864DAF0080EC7E /* suggestion_filter.cc */,
+				2B8499351F864DAF0080EC7E /* user_history_predictor.cc */,
+				2B8499361F864DAF0080EC7E /* user_history_predictor.pb.cc */,
+			);
+			name = prediction;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1264,6 +1287,7 @@
 			files = (
 				2B84990D1F8647940080EC7E /* user_data_manager_mock.cc in Sources */,
 				2B8498891F8632460080EC7E /* segments.cc in Sources */,
+				2B8499381F864DAF0080EC7E /* predictor.cc in Sources */,
 				2B8499091F8647940080EC7E /* engine_builder.cc in Sources */,
 				2B8498331F862DB30080EC7E /* mac_process.mm in Sources */,
 				2B84990C1F8647940080EC7E /* mock_data_engine_factory.cc in Sources */,
@@ -1272,8 +1296,10 @@
 				2B84984A1F862DB30080EC7E /* unverified_aes256.cc in Sources */,
 				2B8498821F8632460080EC7E /* immutable_converter.cc in Sources */,
 				2B84989A1F8636D50080EC7E /* dataset_reader.cc in Sources */,
+				2B84993B1F864DAF0080EC7E /* user_history_predictor.pb.cc in Sources */,
 				2B8498CB1F8639E30080EC7E /* user_dictionary.cc in Sources */,
 				2B8498561F862F390080EC7E /* stats_config_util.cc in Sources */,
+				2B8499371F864DAF0080EC7E /* dictionary_predictor.cc in Sources */,
 				2B84984E1F862DB30080EC7E /* util.cc in Sources */,
 				2B8498471F862DB30080EC7E /* text_normalizer.cc in Sources */,
 				2B84990B1F8647940080EC7E /* mock_converter_engine.cc in Sources */,
@@ -1329,6 +1355,7 @@
 				2B84991C1F864A4E0080EC7E /* ipc.cc in Sources */,
 				2B8498381F862DB30080EC7E /* number_util.cc in Sources */,
 				2B8498541F862F390080EC7E /* character_form_manager.cc in Sources */,
+				2B8499391F864DAF0080EC7E /* suggestion_filter.cc in Sources */,
 				2B8498851F8632460080EC7E /* nbest_generator.cc in Sources */,
 				2B8498361F862DB30080EC7E /* multifile.cc in Sources */,
 				2B8498411F862DB30080EC7E /* scoped_handle.cc in Sources */,
@@ -1360,6 +1387,7 @@
 				2B8498991F8636D50080EC7E /* data_manager.cc in Sources */,
 				2B8498251F862DB30080EC7E /* clock_mock.cc in Sources */,
 				2B84992D1F864B860080EC7E /* http_client.cc in Sources */,
+				2B84993A1F864DAF0080EC7E /* user_history_predictor.cc in Sources */,
 				2B84992B1F864B860080EC7E /* http_client_null.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
