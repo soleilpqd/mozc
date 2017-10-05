@@ -12,7 +12,39 @@
 		2B8499F01F8664B30080EC7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8499EE1F8664B30080EC7E /* Main.storyboard */; };
 		2B8499F21F8664B30080EC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8499F11F8664B30080EC7E /* Assets.xcassets */; };
 		2B8499F51F8664B30080EC7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8499F31F8664B30080EC7E /* LaunchScreen.storyboard */; };
+		2B849A0A1F8665710080EC7E /* Mozc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B849A031F8665610080EC7E /* Mozc.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B849A021F8665610080EC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2B47F2B01F84CD35004E45CD;
+			remoteInfo = Mozc;
+		};
+		2B849A041F8665610080EC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2B84966F1F85EC610080EC7E;
+			remoteInfo = GoogleMozc;
+		};
+		2B849A061F8665610080EC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2B84969F1F860F740080EC7E;
+			remoteInfo = GoogleProtobuf;
+		};
+		2B849A081F86656B0080EC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B47F2AF1F84CD35004E45CD;
+			remoteInfo = Mozc;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2B8499E71F8664B30080EC7E /* DemoMozciOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoMozciOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +54,7 @@
 		2B8499F11F8664B30080EC7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B8499F41F8664B30080EC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B8499F61F8664B30080EC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mozc.xcodeproj; path = ../Mozc/Mozc.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B849A0A1F8665710080EC7E /* Mozc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +72,7 @@
 		2B8499DE1F8664B30080EC7E = {
 			isa = PBXGroup;
 			children = (
+				2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */,
 				2B8499E91F8664B30080EC7E /* DemoMozciOS */,
 				2B8499E81F8664B30080EC7E /* Products */,
 			);
@@ -64,6 +99,16 @@
 			path = DemoMozciOS;
 			sourceTree = "<group>";
 		};
+		2B8499FD1F8665610080EC7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B849A031F8665610080EC7E /* Mozc.framework */,
+				2B849A051F8665610080EC7E /* libGoogleMozc.a */,
+				2B849A071F8665610080EC7E /* libGoogleProtobuf.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +123,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2B849A091F86656B0080EC7E /* PBXTargetDependency */,
 			);
 			name = DemoMozciOS;
 			productName = DemoMozciOS;
@@ -111,12 +157,42 @@
 			mainGroup = 2B8499DE1F8664B30080EC7E;
 			productRefGroup = 2B8499E81F8664B30080EC7E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2B8499FD1F8665610080EC7E /* Products */;
+					ProjectRef = 2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2B8499E61F8664B30080EC7E /* DemoMozciOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2B849A031F8665610080EC7E /* Mozc.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mozc.framework;
+			remoteRef = 2B849A021F8665610080EC7E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2B849A051F8665610080EC7E /* libGoogleMozc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGoogleMozc.a;
+			remoteRef = 2B849A041F8665610080EC7E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2B849A071F8665610080EC7E /* libGoogleProtobuf.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGoogleProtobuf.a;
+			remoteRef = 2B849A061F8665610080EC7E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2B8499E51F8664B30080EC7E /* Resources */ = {
@@ -142,6 +218,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B849A091F86656B0080EC7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mozc;
+			targetProxy = 2B849A081F86656B0080EC7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2B8499EE1F8664B30080EC7E /* Main.storyboard */ = {

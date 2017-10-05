@@ -10,8 +10,8 @@
 		2B4708F11F850055004E45CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4708F01F850055004E45CD /* Foundation.framework */; };
 		2B4708F31F85005A004E45CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4708F21F85005A004E45CD /* UIKit.framework */; };
 		2B47F2B51F84CD35004E45CD /* Mozc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2B31F84CD35004E45CD /* Mozc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B47F2BD1F84D170004E45CD /* MozcEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2BB1F84D170004E45CD /* MozcEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B47F2BE1F84D170004E45CD /* MozcEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2BC1F84D170004E45CD /* MozcEngine.mm */; };
+		2B47F2BD1F84D170004E45CD /* MozcComposer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2BB1F84D170004E45CD /* MozcComposer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B47F2BE1F84D170004E45CD /* MozcComposer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2BC1F84D170004E45CD /* MozcComposer.mm */; };
 		2B47F2C11F84D1DA004E45CD /* MozcPrediction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2BF1F84D1DA004E45CD /* MozcPrediction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B47F2C21F84D1DA004E45CD /* MozcPrediction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2C01F84D1DA004E45CD /* MozcPrediction.mm */; };
 		2B84969A1F85EC8F0080EC7E /* libGoogleMozc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84966F1F85EC610080EC7E /* libGoogleMozc.a */; };
@@ -396,8 +396,8 @@
 		2B47F2B01F84CD35004E45CD /* Mozc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mozc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B47F2B31F84CD35004E45CD /* Mozc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mozc.h; sourceTree = "<group>"; };
 		2B47F2B41F84CD35004E45CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B47F2BB1F84D170004E45CD /* MozcEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MozcEngine.h; sourceTree = "<group>"; };
-		2B47F2BC1F84D170004E45CD /* MozcEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MozcEngine.mm; sourceTree = "<group>"; };
+		2B47F2BB1F84D170004E45CD /* MozcComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MozcComposer.h; sourceTree = "<group>"; };
+		2B47F2BC1F84D170004E45CD /* MozcComposer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MozcComposer.mm; sourceTree = "<group>"; };
 		2B47F2BF1F84D1DA004E45CD /* MozcPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MozcPrediction.h; sourceTree = "<group>"; };
 		2B47F2C01F84D1DA004E45CD /* MozcPrediction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MozcPrediction.mm; sourceTree = "<group>"; };
 		2B84966F1F85EC610080EC7E /* libGoogleMozc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGoogleMozc.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -801,8 +801,8 @@
 			isa = PBXGroup;
 			children = (
 				2B47F2B31F84CD35004E45CD /* Mozc.h */,
-				2B47F2BB1F84D170004E45CD /* MozcEngine.h */,
-				2B47F2BC1F84D170004E45CD /* MozcEngine.mm */,
+				2B47F2BB1F84D170004E45CD /* MozcComposer.h */,
+				2B47F2BC1F84D170004E45CD /* MozcComposer.mm */,
 				2B47F2BF1F84D1DA004E45CD /* MozcPrediction.h */,
 				2B47F2C01F84D1DA004E45CD /* MozcPrediction.mm */,
 				2B47F2B41F84CD35004E45CD /* Info.plist */,
@@ -1448,7 +1448,7 @@
 			files = (
 				2B47F2C11F84D1DA004E45CD /* MozcPrediction.h in Headers */,
 				2B47F2B51F84CD35004E45CD /* Mozc.h in Headers */,
-				2B47F2BD1F84D170004E45CD /* MozcEngine.h in Headers */,
+				2B47F2BD1F84D170004E45CD /* MozcComposer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1568,7 +1568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B47F2BE1F84D170004E45CD /* MozcEngine.mm in Sources */,
+				2B47F2BE1F84D170004E45CD /* MozcComposer.mm in Sources */,
 				2B47F2C21F84D1DA004E45CD /* MozcPrediction.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2177,6 +2177,7 @@
 				2B8496761F85EC610080EC7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B8496A51F860F740080EC7E /* Build configuration list for PBXNativeTarget "GoogleProtobuf" */ = {
 			isa = XCConfigurationList;
@@ -2185,6 +2186,7 @@
 				2B8496A71F860F740080EC7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
