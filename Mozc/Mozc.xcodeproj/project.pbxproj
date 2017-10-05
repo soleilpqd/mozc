@@ -264,6 +264,11 @@
 		2B84991E1F864A4E0080EC7E /* named_event.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499191F864A4E0080EC7E /* named_event.cc */; };
 		2B84991F1F864A4E0080EC7E /* process_watch_dog.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84991A1F864A4E0080EC7E /* process_watch_dog.cc */; };
 		2B8499211F864A8F0080EC7E /* ipc.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499201F864A8F0080EC7E /* ipc.pb.cc */; };
+		2B84992A1F864B860080EC7E /* http_client_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499231F864B860080EC7E /* http_client_mac.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2B84992B1F864B860080EC7E /* http_client_null.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499241F864B860080EC7E /* http_client_null.cc */; };
+		2B84992D1F864B860080EC7E /* http_client.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499261F864B860080EC7E /* http_client.cc */; };
+		2B84992E1F864B860080EC7E /* json_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499271F864B860080EC7E /* json_util.cc */; };
+		2B84992F1F864B860080EC7E /* jsonpath.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499281F864B860080EC7E /* jsonpath.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -564,6 +569,11 @@
 		2B8499191F864A4E0080EC7E /* named_event.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = named_event.cc; path = ../../src/ipc/named_event.cc; sourceTree = "<group>"; };
 		2B84991A1F864A4E0080EC7E /* process_watch_dog.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_watch_dog.cc; path = ../../src/ipc/process_watch_dog.cc; sourceTree = "<group>"; };
 		2B8499201F864A8F0080EC7E /* ipc.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ipc.pb.cc; path = ../../src/ipc/ipc.pb.cc; sourceTree = "<group>"; };
+		2B8499231F864B860080EC7E /* http_client_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = http_client_mac.mm; path = ../../src/net/http_client_mac.mm; sourceTree = "<group>"; };
+		2B8499241F864B860080EC7E /* http_client_null.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_client_null.cc; path = ../../src/net/http_client_null.cc; sourceTree = "<group>"; };
+		2B8499261F864B860080EC7E /* http_client.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_client.cc; path = ../../src/net/http_client.cc; sourceTree = "<group>"; };
+		2B8499271F864B860080EC7E /* json_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_util.cc; path = ../../src/net/json_util.cc; sourceTree = "<group>"; };
+		2B8499281F864B860080EC7E /* jsonpath.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jsonpath.cc; path = ../../src/net/jsonpath.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -650,6 +660,7 @@
 				2B8498CD1F86471E0080EC7E /* engine */,
 				2B84990E1F8648D40080EC7E /* handwriting */,
 				2B8499151F864A1D0080EC7E /* ipc */,
+				2B8499221F864B580080EC7E /* net */,
 			);
 			name = src;
 			path = ../Mozc;
@@ -1101,6 +1112,18 @@
 			name = ipc;
 			sourceTree = "<group>";
 		};
+		2B8499221F864B580080EC7E /* net */ = {
+			isa = PBXGroup;
+			children = (
+				2B8499231F864B860080EC7E /* http_client_mac.mm */,
+				2B8499241F864B860080EC7E /* http_client_null.cc */,
+				2B8499261F864B860080EC7E /* http_client.cc */,
+				2B8499271F864B860080EC7E /* json_util.cc */,
+				2B8499281F864B860080EC7E /* jsonpath.cc */,
+			);
+			name = net;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1265,6 +1288,7 @@
 				2B84983C1F862DB30080EC7E /* process_mutex.cc in Sources */,
 				2B84987B1F8632460080EC7E /* candidate_filter.cc in Sources */,
 				2B8498C31F8639E30080EC7E /* suffix_dictionary.cc in Sources */,
+				2B84992F1F864B860080EC7E /* jsonpath.cc in Sources */,
 				2B8498461F862DB30080EC7E /* system_util.cc in Sources */,
 				2B84982F1F862DB30080EC7E /* hash.cc in Sources */,
 				2B84991F1F864A4E0080EC7E /* process_watch_dog.cc in Sources */,
@@ -1280,6 +1304,7 @@
 				2B84985F1F8631530080EC7E /* table.cc in Sources */,
 				2B8498351F862DB30080EC7E /* mmap.cc in Sources */,
 				2B84985C1F8631530080EC7E /* composer.cc in Sources */,
+				2B84992A1F864B860080EC7E /* http_client_mac.mm in Sources */,
 				2B84982A1F862DB30080EC7E /* debug.cc in Sources */,
 				2B8498291F862DB30080EC7E /* crash_report_handler.cc in Sources */,
 				2B84982B1F862DB30080EC7E /* encryptor.cc in Sources */,
@@ -1330,9 +1355,12 @@
 				2B8498841F8632460080EC7E /* lattice.cc in Sources */,
 				2B8498C61F8639E30080EC7E /* user_dictionary_importer.cc in Sources */,
 				2B8498551F862F390080EC7E /* config_handler.cc in Sources */,
+				2B84992E1F864B860080EC7E /* json_util.cc in Sources */,
 				2B84983F1F862DB30080EC7E /* scheduler_stub.cc in Sources */,
 				2B8498991F8636D50080EC7E /* data_manager.cc in Sources */,
 				2B8498251F862DB30080EC7E /* clock_mock.cc in Sources */,
+				2B84992D1F864B860080EC7E /* http_client.cc in Sources */,
+				2B84992B1F864B860080EC7E /* http_client_null.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
