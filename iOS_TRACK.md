@@ -1,3 +1,8 @@
 - New folder: **Mozc** contains XCode iOS framework project.
-- Build Mozc for MacOSX, then copy files: **character_set.h**, **version_def.h**, **config_file_stream_data.h** from build folder (**out_mac/Release/gen**) into **src/base**. Copy files from **proto_out/protocol** into **protocol**.
+- Build Mozc for MacOSX, then copy files from build folder **out_mac/Release/gen/**:
+  - From **out_mac/Release/gen/base** into **src/base**.
+  - From **out_mac/Release/gen/proto_out/protocol** into **protocol**.
+  - From **out_mac/Release/gen/dictionary** into **dictionary**.
+  - From **out_mac/Release/gen/usage_stats** into **usage_stats**.
+  - From **out_mac/Release/gen/proto_out/usage_stats** into **usage_stats**.
 - Comment out unavailable source code in **mac_process.mm**, **mac_util.mm**.
