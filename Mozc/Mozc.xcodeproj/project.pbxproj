@@ -213,6 +213,9 @@
 		2B84984D1F862DB30080EC7E /* url.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498221F862DB30080EC7E /* url.cc */; };
 		2B84984E1F862DB30080EC7E /* util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498231F862DB30080EC7E /* util.cc */; };
 		2B84984F1F862DB30080EC7E /* version.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498241F862DB30080EC7E /* version.cc */; };
+		2B8498541F862F390080EC7E /* character_form_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498511F862F390080EC7E /* character_form_manager.cc */; };
+		2B8498551F862F390080EC7E /* config_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498521F862F390080EC7E /* config_handler.cc */; };
+		2B8498561F862F390080EC7E /* stats_config_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498531F862F390080EC7E /* stats_config_util.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -462,6 +465,9 @@
 		2B8498221F862DB30080EC7E /* url.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = url.cc; path = ../../src/base/url.cc; sourceTree = "<group>"; };
 		2B8498231F862DB30080EC7E /* util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = util.cc; path = ../../src/base/util.cc; sourceTree = "<group>"; };
 		2B8498241F862DB30080EC7E /* version.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = version.cc; path = ../../src/base/version.cc; sourceTree = "<group>"; };
+		2B8498511F862F390080EC7E /* character_form_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = character_form_manager.cc; path = ../../src/config/character_form_manager.cc; sourceTree = "<group>"; };
+		2B8498521F862F390080EC7E /* config_handler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = config_handler.cc; path = ../../src/config/config_handler.cc; sourceTree = "<group>"; };
+		2B8498531F862F390080EC7E /* stats_config_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stats_config_util.cc; path = ../../src/config/stats_config_util.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -888,6 +894,9 @@
 		2B8498501F862E7F0080EC7E /* config */ = {
 			isa = PBXGroup;
 			children = (
+				2B8498511F862F390080EC7E /* character_form_manager.cc */,
+				2B8498521F862F390080EC7E /* config_handler.cc */,
+				2B8498531F862F390080EC7E /* stats_config_util.cc */,
 			);
 			name = config;
 			sourceTree = "<group>";
@@ -1033,6 +1042,7 @@
 				2B8498331F862DB30080EC7E /* mac_process.mm in Sources */,
 				2B8498341F862DB30080EC7E /* mac_util.mm in Sources */,
 				2B84984A1F862DB30080EC7E /* unverified_aes256.cc in Sources */,
+				2B8498561F862F390080EC7E /* stats_config_util.cc in Sources */,
 				2B84984E1F862DB30080EC7E /* util.cc in Sources */,
 				2B8498471F862DB30080EC7E /* text_normalizer.cc in Sources */,
 				2B84982D1F862DB30080EC7E /* file_util.cc in Sources */,
@@ -1061,6 +1071,7 @@
 				2B8498431F862DB30080EC7E /* singleton.cc in Sources */,
 				2B8498321F862DB30080EC7E /* logging.cc in Sources */,
 				2B8498381F862DB30080EC7E /* number_util.cc in Sources */,
+				2B8498541F862F390080EC7E /* character_form_manager.cc in Sources */,
 				2B8498361F862DB30080EC7E /* multifile.cc in Sources */,
 				2B8498411F862DB30080EC7E /* scoped_handle.cc in Sources */,
 				2B84983A1F862DB30080EC7E /* pepper_file_system_mock.cc in Sources */,
@@ -1071,6 +1082,7 @@
 				2B8498391F862DB30080EC7E /* password_manager.cc in Sources */,
 				2B8498441F862DB30080EC7E /* stopwatch.cc in Sources */,
 				2B84984D1F862DB30080EC7E /* url.cc in Sources */,
+				2B8498551F862F390080EC7E /* config_handler.cc in Sources */,
 				2B84983F1F862DB30080EC7E /* scheduler_stub.cc in Sources */,
 				2B8498251F862DB30080EC7E /* clock_mock.cc in Sources */,
 			);
@@ -1401,7 +1413,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = OS_MACOSX;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../src";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../src",
+					"$(SRCROOT)/../src/third_party/protobuf/src",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_CFLAGS = (
 					"-include",
@@ -1417,7 +1432,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = OS_MACOSX;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../src";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../src",
+					"$(SRCROOT)/../src/third_party/protobuf/src",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_CFLAGS = (
 					"-include",
