@@ -13,7 +13,7 @@
 		2B47F2BD1F84D170004E45CD /* MozcEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2BB1F84D170004E45CD /* MozcEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B47F2BE1F84D170004E45CD /* MozcEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2BC1F84D170004E45CD /* MozcEngine.mm */; };
 		2B47F2C11F84D1DA004E45CD /* MozcPrediction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2BF1F84D1DA004E45CD /* MozcPrediction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B47F2C21F84D1DA004E45CD /* MozcPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2C01F84D1DA004E45CD /* MozcPrediction.m */; };
+		2B47F2C21F84D1DA004E45CD /* MozcPrediction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2C01F84D1DA004E45CD /* MozcPrediction.mm */; };
 		2B84969A1F85EC8F0080EC7E /* libGoogleMozc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84966F1F85EC610080EC7E /* libGoogleMozc.a */; };
 		2B8496BF1F861D610080EC7E /* code_generator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8496B61F861D610080EC7E /* code_generator.cc */; };
 		2B8496C01F861D610080EC7E /* command_line_interface.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8496B71F861D610080EC7E /* command_line_interface.cc */; };
@@ -235,6 +235,12 @@
 		2B8498871F8632460080EC7E /* quality_regression_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498781F8632460080EC7E /* quality_regression_util.cc */; };
 		2B8498881F8632460080EC7E /* segmenter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498791F8632460080EC7E /* segmenter.cc */; };
 		2B8498891F8632460080EC7E /* segments.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84987A1F8632460080EC7E /* segments.cc */; };
+		2B8498981F8636D50080EC7E /* connection_file_reader.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498921F8636D50080EC7E /* connection_file_reader.cc */; };
+		2B8498991F8636D50080EC7E /* data_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498931F8636D50080EC7E /* data_manager.cc */; };
+		2B84989A1F8636D50080EC7E /* dataset_reader.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498941F8636D50080EC7E /* dataset_reader.cc */; };
+		2B84989B1F8636D50080EC7E /* dataset_writer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498951F8636D50080EC7E /* dataset_writer.cc */; };
+		2B84989D1F8636D50080EC7E /* serialized_dictionary.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498971F8636D50080EC7E /* serialized_dictionary.cc */; };
+		2B84989F1F86371A0080EC7E /* dataset.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84989E1F86371A0080EC7E /* dataset.pb.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,7 +290,7 @@
 		2B47F2BB1F84D170004E45CD /* MozcEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MozcEngine.h; sourceTree = "<group>"; };
 		2B47F2BC1F84D170004E45CD /* MozcEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MozcEngine.mm; sourceTree = "<group>"; };
 		2B47F2BF1F84D1DA004E45CD /* MozcPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MozcPrediction.h; sourceTree = "<group>"; };
-		2B47F2C01F84D1DA004E45CD /* MozcPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MozcPrediction.m; sourceTree = "<group>"; };
+		2B47F2C01F84D1DA004E45CD /* MozcPrediction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MozcPrediction.mm; sourceTree = "<group>"; };
 		2B84966F1F85EC610080EC7E /* libGoogleMozc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGoogleMozc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84969F1F860F740080EC7E /* libGoogleProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGoogleProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8496B61F861D610080EC7E /* code_generator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = code_generator.cc; path = ../../src/third_party/protobuf/src/google/protobuf/compiler/code_generator.cc; sourceTree = "<group>"; };
@@ -506,6 +512,12 @@
 		2B8498781F8632460080EC7E /* quality_regression_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = quality_regression_util.cc; path = ../../src/converter/quality_regression_util.cc; sourceTree = "<group>"; };
 		2B8498791F8632460080EC7E /* segmenter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = segmenter.cc; path = ../../src/converter/segmenter.cc; sourceTree = "<group>"; };
 		2B84987A1F8632460080EC7E /* segments.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = segments.cc; path = ../../src/converter/segments.cc; sourceTree = "<group>"; };
+		2B8498921F8636D50080EC7E /* connection_file_reader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connection_file_reader.cc; path = ../../src/data_manager/connection_file_reader.cc; sourceTree = "<group>"; };
+		2B8498931F8636D50080EC7E /* data_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = data_manager.cc; path = ../../src/data_manager/data_manager.cc; sourceTree = "<group>"; };
+		2B8498941F8636D50080EC7E /* dataset_reader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataset_reader.cc; path = ../../src/data_manager/dataset_reader.cc; sourceTree = "<group>"; };
+		2B8498951F8636D50080EC7E /* dataset_writer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataset_writer.cc; path = ../../src/data_manager/dataset_writer.cc; sourceTree = "<group>"; };
+		2B8498971F8636D50080EC7E /* serialized_dictionary.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = serialized_dictionary.cc; path = ../../src/data_manager/serialized_dictionary.cc; sourceTree = "<group>"; };
+		2B84989E1F86371A0080EC7E /* dataset.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataset.pb.cc; path = ../../src/data_manager/dataset.pb.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -574,7 +586,7 @@
 				2B47F2BB1F84D170004E45CD /* MozcEngine.h */,
 				2B47F2BC1F84D170004E45CD /* MozcEngine.mm */,
 				2B47F2BF1F84D1DA004E45CD /* MozcPrediction.h */,
-				2B47F2C01F84D1DA004E45CD /* MozcPrediction.m */,
+				2B47F2C01F84D1DA004E45CD /* MozcPrediction.mm */,
 				2B47F2B41F84CD35004E45CD /* Info.plist */,
 			);
 			path = Mozc;
@@ -587,6 +599,7 @@
 				2B8498571F8631260080EC7E /* composer */,
 				2B8498501F862E7F0080EC7E /* config */,
 				2B84986B1F8631FF0080EC7E /* converter */,
+				2B8498911F8636AE0080EC7E /* data_manager */,
 			);
 			name = src;
 			path = ../Mozc;
@@ -974,6 +987,19 @@
 			name = converter;
 			sourceTree = "<group>";
 		};
+		2B8498911F8636AE0080EC7E /* data_manager */ = {
+			isa = PBXGroup;
+			children = (
+				2B8498921F8636D50080EC7E /* connection_file_reader.cc */,
+				2B8498931F8636D50080EC7E /* data_manager.cc */,
+				2B8498941F8636D50080EC7E /* dataset_reader.cc */,
+				2B8498951F8636D50080EC7E /* dataset_writer.cc */,
+				2B8498971F8636D50080EC7E /* serialized_dictionary.cc */,
+				2B84989E1F86371A0080EC7E /* dataset.pb.cc */,
+			);
+			name = data_manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1104,7 +1130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B47F2BE1F84D170004E45CD /* MozcEngine.mm in Sources */,
-				2B47F2C21F84D1DA004E45CD /* MozcPrediction.m in Sources */,
+				2B47F2C21F84D1DA004E45CD /* MozcPrediction.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1117,10 +1143,12 @@
 				2B8498341F862DB30080EC7E /* mac_util.mm in Sources */,
 				2B84984A1F862DB30080EC7E /* unverified_aes256.cc in Sources */,
 				2B8498821F8632460080EC7E /* immutable_converter.cc in Sources */,
+				2B84989A1F8636D50080EC7E /* dataset_reader.cc in Sources */,
 				2B8498561F862F390080EC7E /* stats_config_util.cc in Sources */,
 				2B84984E1F862DB30080EC7E /* util.cc in Sources */,
 				2B8498471F862DB30080EC7E /* text_normalizer.cc in Sources */,
 				2B84982D1F862DB30080EC7E /* file_util.cc in Sources */,
+				2B84989B1F8636D50080EC7E /* dataset_writer.cc in Sources */,
 				2B8498831F8632460080EC7E /* key_corrector.cc in Sources */,
 				2B8498311F862DB30080EC7E /* japanese_util_rule.cc in Sources */,
 				2B8498881F8632460080EC7E /* segmenter.cc in Sources */,
@@ -1140,6 +1168,7 @@
 				2B84982A1F862DB30080EC7E /* debug.cc in Sources */,
 				2B8498291F862DB30080EC7E /* crash_report_handler.cc in Sources */,
 				2B84982B1F862DB30080EC7E /* encryptor.cc in Sources */,
+				2B84989F1F86371A0080EC7E /* dataset.pb.cc in Sources */,
 				2B84983D1F862DB30080EC7E /* process.cc in Sources */,
 				2B84982E1F862DB30080EC7E /* flags.cc in Sources */,
 				2B8498481F862DB30080EC7E /* thread.cc in Sources */,
@@ -1160,11 +1189,13 @@
 				2B8498851F8632460080EC7E /* nbest_generator.cc in Sources */,
 				2B8498361F862DB30080EC7E /* multifile.cc in Sources */,
 				2B8498411F862DB30080EC7E /* scoped_handle.cc in Sources */,
+				2B8498981F8636D50080EC7E /* connection_file_reader.cc in Sources */,
 				2B84983A1F862DB30080EC7E /* pepper_file_system_mock.cc in Sources */,
 				2B84985E1F8631530080EC7E /* key_parser.cc in Sources */,
 				2B8498401F862DB30080EC7E /* scheduler.cc in Sources */,
 				2B8498871F8632460080EC7E /* quality_regression_util.cc in Sources */,
 				2B84987F1F8632460080EC7E /* converter.cc in Sources */,
+				2B84989D1F8636D50080EC7E /* serialized_dictionary.cc in Sources */,
 				2B8498281F862DB30080EC7E /* cpu_stats.cc in Sources */,
 				2B84984C1F862DB30080EC7E /* update_util.cc in Sources */,
 				2B8498861F8632460080EC7E /* pos_id_printer.cc in Sources */,
@@ -1176,6 +1207,7 @@
 				2B8498841F8632460080EC7E /* lattice.cc in Sources */,
 				2B8498551F862F390080EC7E /* config_handler.cc in Sources */,
 				2B84983F1F862DB30080EC7E /* scheduler_stub.cc in Sources */,
+				2B8498991F8636D50080EC7E /* data_manager.cc in Sources */,
 				2B8498251F862DB30080EC7E /* clock_mock.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

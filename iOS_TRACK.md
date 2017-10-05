@@ -5,4 +5,5 @@
   - From **out_mac/Release/gen/dictionary** into **dictionary**.
   - From **out_mac/Release/gen/usage_stats** into **usage_stats**.
   - From **out_mac/Release/gen/proto_out/usage_stats** into **usage_stats**.
+  - From **out_mac/Release/gen/proto_out/data_manager** into **data_manager**.
 - Comment out unavailable source code in **mac_process.mm**, **mac_util.mm**.
