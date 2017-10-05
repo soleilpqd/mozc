@@ -258,6 +258,8 @@
 		2B84990B1F8647940080EC7E /* mock_converter_engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499061F8647940080EC7E /* mock_converter_engine.cc */; };
 		2B84990C1F8647940080EC7E /* mock_data_engine_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499071F8647940080EC7E /* mock_data_engine_factory.cc */; };
 		2B84990D1F8647940080EC7E /* user_data_manager_mock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499081F8647940080EC7E /* user_data_manager_mock.cc */; };
+		2B8499121F8648EC0080EC7E /* cloud_handwriting.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84990F1F8648EC0080EC7E /* cloud_handwriting.cc */; };
+		2B8499131F8648EC0080EC7E /* handwriting_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499101F8648EC0080EC7E /* handwriting_manager.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -552,6 +554,8 @@
 		2B8499061F8647940080EC7E /* mock_converter_engine.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mock_converter_engine.cc; path = ../../src/engine/mock_converter_engine.cc; sourceTree = "<group>"; };
 		2B8499071F8647940080EC7E /* mock_data_engine_factory.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mock_data_engine_factory.cc; path = ../../src/engine/mock_data_engine_factory.cc; sourceTree = "<group>"; };
 		2B8499081F8647940080EC7E /* user_data_manager_mock.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_data_manager_mock.cc; path = ../../src/engine/user_data_manager_mock.cc; sourceTree = "<group>"; };
+		2B84990F1F8648EC0080EC7E /* cloud_handwriting.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cloud_handwriting.cc; path = ../../src/handwriting/cloud_handwriting.cc; sourceTree = "<group>"; };
+		2B8499101F8648EC0080EC7E /* handwriting_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = handwriting_manager.cc; path = ../../src/handwriting/handwriting_manager.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,6 +640,7 @@
 				2B8498911F8636AE0080EC7E /* data_manager */,
 				2B8498B41F86399F0080EC7E /* dictionary */,
 				2B8498CD1F86471E0080EC7E /* engine */,
+				2B84990E1F8648D40080EC7E /* handwriting */,
 			);
 			name = src;
 			path = ../Mozc;
@@ -1067,6 +1072,15 @@
 			name = engine;
 			sourceTree = "<group>";
 		};
+		2B84990E1F8648D40080EC7E /* handwriting */ = {
+			isa = PBXGroup;
+			children = (
+				2B84990F1F8648EC0080EC7E /* cloud_handwriting.cc */,
+				2B8499101F8648EC0080EC7E /* handwriting_manager.cc */,
+			);
+			name = handwriting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1237,6 +1251,7 @@
 				2B8498C91F8639E30080EC7E /* user_dictionary_storage.cc in Sources */,
 				2B84985D1F8631530080EC7E /* key_event_util.cc in Sources */,
 				2B8498C11F8639E30080EC7E /* dictionary_impl.cc in Sources */,
+				2B8499121F8648EC0080EC7E /* cloud_handwriting.cc in Sources */,
 				2B8498371F862DB30080EC7E /* mutex.cc in Sources */,
 				2B8498421F862DB30080EC7E /* serialized_string_array.cc in Sources */,
 				2B8498491F862DB30080EC7E /* unnamed_event.cc in Sources */,
@@ -1279,6 +1294,7 @@
 				2B8498871F8632460080EC7E /* quality_regression_util.cc in Sources */,
 				2B84987F1F8632460080EC7E /* converter.cc in Sources */,
 				2B84989D1F8636D50080EC7E /* serialized_dictionary.cc in Sources */,
+				2B8499131F8648EC0080EC7E /* handwriting_manager.cc in Sources */,
 				2B8498281F862DB30080EC7E /* cpu_stats.cc in Sources */,
 				2B84984C1F862DB30080EC7E /* update_util.cc in Sources */,
 				2B8498861F8632460080EC7E /* pos_id_printer.cc in Sources */,
