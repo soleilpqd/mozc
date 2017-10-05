@@ -318,6 +318,18 @@
 		2B8499941F864FDF0080EC7E /* variants_rewriter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499721F864FDF0080EC7E /* variants_rewriter.cc */; };
 		2B8499951F864FDF0080EC7E /* version_rewriter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499731F864FDF0080EC7E /* version_rewriter.cc */; };
 		2B8499961F864FDF0080EC7E /* zipcode_rewriter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499741F864FDF0080EC7E /* zipcode_rewriter.cc */; };
+		2B8499A51F8650AF0080EC7E /* generic_storage_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499981F8650AF0080EC7E /* generic_storage_manager.cc */; };
+		2B8499A61F8650AF0080EC7E /* ime_switch_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499991F8650AF0080EC7E /* ime_switch_util.cc */; };
+		2B8499A71F8650AF0080EC7E /* key_info_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84999A1F8650AF0080EC7E /* key_info_util.cc */; };
+		2B8499A81F8650AF0080EC7E /* output_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84999B1F8650AF0080EC7E /* output_util.cc */; };
+		2B8499AA1F8650AF0080EC7E /* session_converter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84999D1F8650AF0080EC7E /* session_converter.cc */; };
+		2B8499AB1F8650AF0080EC7E /* session_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84999E1F8650AF0080EC7E /* session_handler.cc */; };
+		2B8499AC1F8650AF0080EC7E /* session_observer_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B84999F1F8650AF0080EC7E /* session_observer_handler.cc */; };
+		2B8499AD1F8650AF0080EC7E /* session_server.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499A01F8650AF0080EC7E /* session_server.cc */; };
+		2B8499AE1F8650AF0080EC7E /* session_usage_observer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499A11F8650AF0080EC7E /* session_usage_observer.cc */; };
+		2B8499AF1F8650AF0080EC7E /* session_usage_stats_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499A21F8650AF0080EC7E /* session_usage_stats_util.cc */; };
+		2B8499B01F8650AF0080EC7E /* session_watch_dog.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499A31F8650AF0080EC7E /* session_watch_dog.cc */; };
+		2B8499B11F8650AF0080EC7E /* session.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499A41F8650AF0080EC7E /* session.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -672,6 +684,18 @@
 		2B8499721F864FDF0080EC7E /* variants_rewriter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = variants_rewriter.cc; path = ../../src/rewriter/variants_rewriter.cc; sourceTree = "<group>"; };
 		2B8499731F864FDF0080EC7E /* version_rewriter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = version_rewriter.cc; path = ../../src/rewriter/version_rewriter.cc; sourceTree = "<group>"; };
 		2B8499741F864FDF0080EC7E /* zipcode_rewriter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = zipcode_rewriter.cc; path = ../../src/rewriter/zipcode_rewriter.cc; sourceTree = "<group>"; };
+		2B8499981F8650AF0080EC7E /* generic_storage_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = generic_storage_manager.cc; path = ../../src/session/generic_storage_manager.cc; sourceTree = "<group>"; };
+		2B8499991F8650AF0080EC7E /* ime_switch_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ime_switch_util.cc; path = ../../src/session/ime_switch_util.cc; sourceTree = "<group>"; };
+		2B84999A1F8650AF0080EC7E /* key_info_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = key_info_util.cc; path = ../../src/session/key_info_util.cc; sourceTree = "<group>"; };
+		2B84999B1F8650AF0080EC7E /* output_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = output_util.cc; path = ../../src/session/output_util.cc; sourceTree = "<group>"; };
+		2B84999D1F8650AF0080EC7E /* session_converter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_converter.cc; path = ../../src/session/session_converter.cc; sourceTree = "<group>"; };
+		2B84999E1F8650AF0080EC7E /* session_handler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_handler.cc; path = ../../src/session/session_handler.cc; sourceTree = "<group>"; };
+		2B84999F1F8650AF0080EC7E /* session_observer_handler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_observer_handler.cc; path = ../../src/session/session_observer_handler.cc; sourceTree = "<group>"; };
+		2B8499A01F8650AF0080EC7E /* session_server.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_server.cc; path = ../../src/session/session_server.cc; sourceTree = "<group>"; };
+		2B8499A11F8650AF0080EC7E /* session_usage_observer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_usage_observer.cc; path = ../../src/session/session_usage_observer.cc; sourceTree = "<group>"; };
+		2B8499A21F8650AF0080EC7E /* session_usage_stats_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_usage_stats_util.cc; path = ../../src/session/session_usage_stats_util.cc; sourceTree = "<group>"; };
+		2B8499A31F8650AF0080EC7E /* session_watch_dog.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_watch_dog.cc; path = ../../src/session/session_watch_dog.cc; sourceTree = "<group>"; };
+		2B8499A41F8650AF0080EC7E /* session.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session.cc; path = ../../src/session/session.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -763,6 +787,7 @@
 				2B84993C1F864E0A0080EC7E /* protocol */,
 				2B84994F1F864EE10080EC7E /* request */,
 				2B8499521F864F5E0080EC7E /* rewriter */,
+				2B8499971F8650540080EC7E /* session */,
 			);
 			name = src;
 			path = ../Mozc;
@@ -1303,6 +1328,25 @@
 			name = rewriter;
 			sourceTree = "<group>";
 		};
+		2B8499971F8650540080EC7E /* session */ = {
+			isa = PBXGroup;
+			children = (
+				2B8499981F8650AF0080EC7E /* generic_storage_manager.cc */,
+				2B8499991F8650AF0080EC7E /* ime_switch_util.cc */,
+				2B84999A1F8650AF0080EC7E /* key_info_util.cc */,
+				2B84999B1F8650AF0080EC7E /* output_util.cc */,
+				2B84999D1F8650AF0080EC7E /* session_converter.cc */,
+				2B84999E1F8650AF0080EC7E /* session_handler.cc */,
+				2B84999F1F8650AF0080EC7E /* session_observer_handler.cc */,
+				2B8499A01F8650AF0080EC7E /* session_server.cc */,
+				2B8499A11F8650AF0080EC7E /* session_usage_observer.cc */,
+				2B8499A21F8650AF0080EC7E /* session_usage_stats_util.cc */,
+				2B8499A31F8650AF0080EC7E /* session_watch_dog.cc */,
+				2B8499A41F8650AF0080EC7E /* session.cc */,
+			);
+			name = session;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1460,6 +1504,7 @@
 				2B8498CB1F8639E30080EC7E /* user_dictionary.cc in Sources */,
 				2B84997F1F864FDF0080EC7E /* english_variants_rewriter.cc in Sources */,
 				2B8498561F862F390080EC7E /* stats_config_util.cc in Sources */,
+				2B8499AE1F8650AF0080EC7E /* session_usage_observer.cc in Sources */,
 				2B8499371F864DAF0080EC7E /* dictionary_predictor.cc in Sources */,
 				2B8499771F864FDF0080EC7E /* collocation_util.cc in Sources */,
 				2B84984E1F862DB30080EC7E /* util.cc in Sources */,
@@ -1497,10 +1542,13 @@
 				2B8499511F864EF60080EC7E /* conversion_request.cc in Sources */,
 				2B84997D1F864FDF0080EC7E /* emoji_rewriter.cc in Sources */,
 				2B84985D1F8631530080EC7E /* key_event_util.cc in Sources */,
+				2B8499A81F8650AF0080EC7E /* output_util.cc in Sources */,
+				2B8499A71F8650AF0080EC7E /* key_info_util.cc in Sources */,
 				2B8499471F864E310080EC7E /* commands.pb.cc in Sources */,
 				2B8498C11F8639E30080EC7E /* dictionary_impl.cc in Sources */,
 				2B84998A1F864FDF0080EC7E /* remove_redundant_candidate_rewriter.cc in Sources */,
 				2B8499121F8648EC0080EC7E /* cloud_handwriting.cc in Sources */,
+				2B8499A51F8650AF0080EC7E /* generic_storage_manager.cc in Sources */,
 				2B8498371F862DB30080EC7E /* mutex.cc in Sources */,
 				2B8498421F862DB30080EC7E /* serialized_string_array.cc in Sources */,
 				2B8498491F862DB30080EC7E /* unnamed_event.cc in Sources */,
@@ -1510,12 +1558,15 @@
 				2B84985F1F8631530080EC7E /* table.cc in Sources */,
 				2B8498351F862DB30080EC7E /* mmap.cc in Sources */,
 				2B84985C1F8631530080EC7E /* composer.cc in Sources */,
+				2B8499AA1F8650AF0080EC7E /* session_converter.cc in Sources */,
 				2B84992A1F864B860080EC7E /* http_client_mac.mm in Sources */,
 				2B84982A1F862DB30080EC7E /* debug.cc in Sources */,
 				2B8499911F864FDF0080EC7E /* user_boundary_history_rewriter.cc in Sources */,
+				2B8499A61F8650AF0080EC7E /* ime_switch_util.cc in Sources */,
 				2B8498291F862DB30080EC7E /* crash_report_handler.cc in Sources */,
 				2B8499921F864FDF0080EC7E /* user_dictionary_rewriter.cc in Sources */,
 				2B84982B1F862DB30080EC7E /* encryptor.cc in Sources */,
+				2B8499B11F8650AF0080EC7E /* session.cc in Sources */,
 				2B8499791F864FDF0080EC7E /* correction_rewriter.cc in Sources */,
 				2B84989F1F86371A0080EC7E /* dataset.pb.cc in Sources */,
 				2B8499481F864E310080EC7E /* config.pb.cc in Sources */,
@@ -1523,6 +1574,7 @@
 				2B84982E1F862DB30080EC7E /* flags.cc in Sources */,
 				2B8498481F862DB30080EC7E /* thread.cc in Sources */,
 				2B8498811F8632460080EC7E /* immutable_converter_interface.cc in Sources */,
+				2B8499AB1F8650AF0080EC7E /* session_handler.cc in Sources */,
 				2B84983B1F862DB30080EC7E /* pepper_file_util.cc in Sources */,
 				2B84987C1F8632460080EC7E /* connector.cc in Sources */,
 				2B8498271F862DB30080EC7E /* config_file_stream.cc in Sources */,
@@ -1555,6 +1607,8 @@
 				2B8498CC1F8639E30080EC7E /* user_pos.cc in Sources */,
 				2B8498981F8636D50080EC7E /* connection_file_reader.cc in Sources */,
 				2B84983A1F862DB30080EC7E /* pepper_file_system_mock.cc in Sources */,
+				2B8499AF1F8650AF0080EC7E /* session_usage_stats_util.cc in Sources */,
+				2B8499B01F8650AF0080EC7E /* session_watch_dog.cc in Sources */,
 				2B8499811F864FDF0080EC7E /* fortune_rewriter.cc in Sources */,
 				2B84985E1F8631530080EC7E /* key_parser.cc in Sources */,
 				2B84998D1F864FDF0080EC7E /* symbol_rewriter.cc in Sources */,
@@ -1563,6 +1617,7 @@
 				2B84991E1F864A4E0080EC7E /* named_event.cc in Sources */,
 				2B8499761F864FDF0080EC7E /* collocation_rewriter.cc in Sources */,
 				2B8499781F864FDF0080EC7E /* command_rewriter.cc in Sources */,
+				2B8499AD1F8650AF0080EC7E /* session_server.cc in Sources */,
 				2B84987F1F8632460080EC7E /* converter.cc in Sources */,
 				2B84989D1F8636D50080EC7E /* serialized_dictionary.cc in Sources */,
 				2B8499131F8648EC0080EC7E /* handwriting_manager.cc in Sources */,
@@ -1577,6 +1632,7 @@
 				2B84987D1F8632460080EC7E /* converter_mock.cc in Sources */,
 				2B84984D1F862DB30080EC7E /* url.cc in Sources */,
 				2B8498841F8632460080EC7E /* lattice.cc in Sources */,
+				2B8499AC1F8650AF0080EC7E /* session_observer_handler.cc in Sources */,
 				2B8498C61F8639E30080EC7E /* user_dictionary_importer.cc in Sources */,
 				2B8498551F862F390080EC7E /* config_handler.cc in Sources */,
 				2B8499491F864E310080EC7E /* engine_builder.pb.cc in Sources */,
