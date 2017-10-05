@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "78F167BAF9AB9CB2C48DF8982502799E41BA4AA4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "78F167BAF9AB9CB2C48DF8982502799E41BA4AA4" : 9223372036854775807,
+    "DBA6F8B12B84878540F44342C4772AC004D85ABD" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C4E32787-064B-4383-A0C1-D0F8F2BB5530",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "78F167BAF9AB9CB2C48DF8982502799E41BA4AA4" : "mozc\/",
+    "DBA6F8B12B84878540F44342C4772AC004D85ABD" : "mozc\/src\/third_party\/protobuf\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Mozc",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Mozc\/Mozc.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/soleilpqd\/mozc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78F167BAF9AB9CB2C48DF8982502799E41BA4AA4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/google\/protobuf.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DBA6F8B12B84878540F44342C4772AC004D85ABD"
+    }
+  ]
+}
