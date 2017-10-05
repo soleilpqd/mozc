@@ -7,26 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B4708B11F84E1DA004E45CD /* debug.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47089D1F84E1DA004E45CD /* debug.cc */; };
-		2B4708B31F84E1DA004E45CD /* file_stream.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47089F1F84E1DA004E45CD /* file_stream.cc */; };
-		2B4708B51F84E1DA004E45CD /* file_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A11F84E1DA004E45CD /* file_util.cc */; };
-		2B4708B71F84E1DA004E45CD /* flags.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A31F84E1DA004E45CD /* flags.cc */; };
-		2B4708B91F84E1DA004E45CD /* hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A51F84E1DA004E45CD /* hash.cc */; };
-		2B4708BB1F84E1DA004E45CD /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A71F84E1DA004E45CD /* logging.cc */; };
-		2B4708BD1F84E1DA004E45CD /* mmap.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A91F84E1DA004E45CD /* mmap.cc */; };
-		2B4708BF1F84E1DA004E45CD /* mutex.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708AB1F84E1DA004E45CD /* mutex.cc */; };
-		2B4708C11F84E1DA004E45CD /* number_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708AD1F84E1DA004E45CD /* number_util.cc */; };
-		2B4708C31F84E1DA004E45CD /* scoped_handle.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708AF1F84E1DA004E45CD /* scoped_handle.cc */; };
-		2B4708D51F84E21F004E45CD /* singleton.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708C51F84E21F004E45CD /* singleton.cc */; };
-		2B4708D71F84E21F004E45CD /* string_piece.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708C71F84E21F004E45CD /* string_piece.cc */; };
-		2B4708D91F84E21F004E45CD /* system_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708C91F84E21F004E45CD /* system_util.cc */; };
-		2B4708DB1F84E21F004E45CD /* text_normalizer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708CB1F84E21F004E45CD /* text_normalizer.cc */; };
-		2B4708DD1F84E21F004E45CD /* thread.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708CD1F84E21F004E45CD /* thread.cc */; };
-		2B4708DF1F84E21F004E45CD /* util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708CF1F84E21F004E45CD /* util.cc */; };
-		2B4708E11F84E21F004E45CD /* version.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708D11F84E21F004E45CD /* version.cc */; };
-		2B4708E31F84E21F004E45CD /* win_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708D31F84E21F004E45CD /* win_util.cc */; };
-		2B4708E91F84FFC1004E45CD /* clock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708E71F84FFC1004E45CD /* clock.cc */; };
-		2B4708ED1F850010004E45CD /* japanese_util_rule.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708EB1F850010004E45CD /* japanese_util_rule.cc */; };
 		2B4708F11F850055004E45CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4708F01F850055004E45CD /* Foundation.framework */; };
 		2B4708F31F85005A004E45CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4708F21F85005A004E45CD /* UIKit.framework */; };
 		2B47F2B51F84CD35004E45CD /* Mozc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2B31F84CD35004E45CD /* Mozc.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,19 +14,62 @@
 		2B47F2BE1F84D170004E45CD /* MozcEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2BC1F84D170004E45CD /* MozcEngine.mm */; };
 		2B47F2C11F84D1DA004E45CD /* MozcPrediction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B47F2BF1F84D1DA004E45CD /* MozcPrediction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B47F2C21F84D1DA004E45CD /* MozcPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2C01F84D1DA004E45CD /* MozcPrediction.m */; };
-		2B47F2FC1F84D4DF004E45CD /* clock_mock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2F61F84D4DF004E45CD /* clock_mock.cc */; };
-		2B47F2FE1F84D4DF004E45CD /* cpu_stats.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2F81F84D4DF004E45CD /* cpu_stats.cc */; };
-		2B47F3011F84D4DF004E45CD /* mac_process.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2FB1F84D4DF004E45CD /* mac_process.mm */; };
-		2B47F3151F84D53E004E45CD /* mac_util.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3031F84D53E004E45CD /* mac_util.mm */; };
-		2B47F3161F84D53E004E45CD /* process_mutex.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3041F84D53E004E45CD /* process_mutex.cc */; };
-		2B47F3181F84D53E004E45CD /* process.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3061F84D53E004E45CD /* process.cc */; };
-		2B47F31A1F84D53E004E45CD /* run_level.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3081F84D53E004E45CD /* run_level.cc */; };
-		2B47F31C1F84D53E004E45CD /* scheduler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F30A1F84D53E004E45CD /* scheduler.cc */; };
-		2B47F31E1F84D53E004E45CD /* stopwatch.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F30C1F84D53E004E45CD /* stopwatch.cc */; };
-		2B47F3201F84D53E004E45CD /* unnamed_event.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F30E1F84D53E004E45CD /* unnamed_event.cc */; };
-		2B47F3221F84D53E004E45CD /* update_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3101F84D53E004E45CD /* update_util.cc */; };
-		2B47F3241F84D53E004E45CD /* url.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3121F84D53E004E45CD /* url.cc */; };
+		2B8496781F85EC750080EC7E /* debug.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47089D1F84E1DA004E45CD /* debug.cc */; };
+		2B8496791F85EC750080EC7E /* file_stream.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47089F1F84E1DA004E45CD /* file_stream.cc */; };
+		2B84967A1F85EC750080EC7E /* file_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A11F84E1DA004E45CD /* file_util.cc */; };
+		2B84967B1F85EC750080EC7E /* flags.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A31F84E1DA004E45CD /* flags.cc */; };
+		2B84967C1F85EC750080EC7E /* hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A51F84E1DA004E45CD /* hash.cc */; };
+		2B84967D1F85EC750080EC7E /* japanese_util_rule.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708EB1F850010004E45CD /* japanese_util_rule.cc */; };
+		2B84967E1F85EC750080EC7E /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A71F84E1DA004E45CD /* logging.cc */; };
+		2B84967F1F85EC750080EC7E /* mmap.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708A91F84E1DA004E45CD /* mmap.cc */; };
+		2B8496801F85EC750080EC7E /* mutex.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708AB1F84E1DA004E45CD /* mutex.cc */; };
+		2B8496811F85EC750080EC7E /* number_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708AD1F84E1DA004E45CD /* number_util.cc */; };
+		2B8496821F85EC750080EC7E /* scoped_handle.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708AF1F84E1DA004E45CD /* scoped_handle.cc */; };
+		2B8496831F85EC750080EC7E /* singleton.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708C51F84E21F004E45CD /* singleton.cc */; };
+		2B8496841F85EC750080EC7E /* string_piece.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708C71F84E21F004E45CD /* string_piece.cc */; };
+		2B8496851F85EC750080EC7E /* system_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708C91F84E21F004E45CD /* system_util.cc */; };
+		2B8496861F85EC750080EC7E /* text_normalizer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708CB1F84E21F004E45CD /* text_normalizer.cc */; };
+		2B8496871F85EC750080EC7E /* thread.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708CD1F84E21F004E45CD /* thread.cc */; };
+		2B8496881F85EC750080EC7E /* util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708CF1F84E21F004E45CD /* util.cc */; };
+		2B8496891F85EC750080EC7E /* version.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708D11F84E21F004E45CD /* version.cc */; };
+		2B84968A1F85EC750080EC7E /* win_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708D31F84E21F004E45CD /* win_util.cc */; };
+		2B84968B1F85EC7A0080EC7E /* clock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B4708E71F84FFC1004E45CD /* clock.cc */; };
+		2B84968C1F85EC7A0080EC7E /* clock_mock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2F61F84D4DF004E45CD /* clock_mock.cc */; };
+		2B84968D1F85EC7A0080EC7E /* cpu_stats.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2F81F84D4DF004E45CD /* cpu_stats.cc */; };
+		2B84968E1F85EC7A0080EC7E /* mac_process.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F2FB1F84D4DF004E45CD /* mac_process.mm */; };
+		2B84968F1F85EC7A0080EC7E /* mac_util.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3031F84D53E004E45CD /* mac_util.mm */; };
+		2B8496901F85EC7A0080EC7E /* process_mutex.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3041F84D53E004E45CD /* process_mutex.cc */; };
+		2B8496911F85EC7A0080EC7E /* process.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3061F84D53E004E45CD /* process.cc */; };
+		2B8496921F85EC7A0080EC7E /* run_level.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3081F84D53E004E45CD /* run_level.cc */; };
+		2B8496931F85EC7A0080EC7E /* scheduler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F30A1F84D53E004E45CD /* scheduler.cc */; };
+		2B8496941F85EC7A0080EC7E /* stopwatch.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F30C1F84D53E004E45CD /* stopwatch.cc */; };
+		2B8496951F85EC7A0080EC7E /* unnamed_event.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F30E1F84D53E004E45CD /* unnamed_event.cc */; };
+		2B8496961F85EC7A0080EC7E /* update_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3101F84D53E004E45CD /* update_util.cc */; };
+		2B8496971F85EC7A0080EC7E /* url.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F3121F84D53E004E45CD /* url.cc */; };
+		2B84969A1F85EC8F0080EC7E /* libGoogleMozc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84966F1F85EC610080EC7E /* libGoogleMozc.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B8496981F85EC8B0080EC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B47F2A71F84CD35004E45CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B84966E1F85EC610080EC7E;
+			remoteInfo = GoogleMozc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B84966D1F85EC610080EC7E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2B47089D1F84E1DA004E45CD /* debug.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = debug.cc; path = ../../src/base/debug.cc; sourceTree = "<group>"; };
@@ -90,6 +113,7 @@
 		2B47F30E1F84D53E004E45CD /* unnamed_event.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unnamed_event.cc; path = ../../src/base/unnamed_event.cc; sourceTree = "<group>"; };
 		2B47F3101F84D53E004E45CD /* update_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = update_util.cc; path = ../../src/base/update_util.cc; sourceTree = "<group>"; };
 		2B47F3121F84D53E004E45CD /* url.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = url.cc; path = ../../src/base/url.cc; sourceTree = "<group>"; };
+		2B84966F1F85EC610080EC7E /* libGoogleMozc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGoogleMozc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +121,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B84969A1F85EC8F0080EC7E /* libGoogleMozc.a in Frameworks */,
 				2B4708F31F85005A004E45CD /* UIKit.framework in Frameworks */,
 				2B4708F11F850055004E45CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B84966C1F85EC610080EC7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				2B47F2B21F84CD35004E45CD /* Mozc */,
+				2B8496701F85EC610080EC7E /* GoogleMozc */,
 				2B47F2B11F84CD35004E45CD /* Products */,
 				2B4708EF1F850054004E45CD /* Frameworks */,
 			);
@@ -127,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				2B47F2B01F84CD35004E45CD /* Mozc.framework */,
+				2B84966F1F85EC610080EC7E /* libGoogleMozc.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +168,6 @@
 		2B47F2B21F84CD35004E45CD /* Mozc */ = {
 			isa = PBXGroup;
 			children = (
-				2B47F2C31F84D238004E45CD /* src */,
 				2B47F2B31F84CD35004E45CD /* Mozc.h */,
 				2B47F2BB1F84D170004E45CD /* MozcEngine.h */,
 				2B47F2BC1F84D170004E45CD /* MozcEngine.mm */,
@@ -152,6 +185,7 @@
 				2B47F2C41F84D395004E45CD /* base */,
 			);
 			name = src;
+			path = ../Mozc;
 			sourceTree = "<group>";
 		};
 		2B47F2C41F84D395004E45CD /* base */ = {
@@ -200,6 +234,14 @@
 			name = base_core;
 			sourceTree = "<group>";
 		};
+		2B8496701F85EC610080EC7E /* GoogleMozc */ = {
+			isa = PBXGroup;
+			children = (
+				2B47F2C31F84D238004E45CD /* src */,
+			);
+			path = GoogleMozc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -228,11 +270,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				2B8496991F85EC8B0080EC7E /* PBXTargetDependency */,
 			);
 			name = Mozc;
 			productName = Mozc;
 			productReference = 2B47F2B01F84CD35004E45CD /* Mozc.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		2B84966E1F85EC610080EC7E /* GoogleMozc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8496771F85EC610080EC7E /* Build configuration list for PBXNativeTarget "GoogleMozc" */;
+			buildPhases = (
+				2B84966B1F85EC610080EC7E /* Sources */,
+				2B84966C1F85EC610080EC7E /* Frameworks */,
+				2B84966D1F85EC610080EC7E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleMozc;
+			productName = GoogleMozc;
+			productReference = 2B84966F1F85EC610080EC7E /* libGoogleMozc.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -246,6 +306,10 @@
 					2B47F2AF1F84CD35004E45CD = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Manual;
+					};
+					2B84966E1F85EC610080EC7E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -264,6 +328,7 @@
 			projectRoot = "";
 			targets = (
 				2B47F2AF1F84CD35004E45CD /* Mozc */,
+				2B84966E1F85EC610080EC7E /* GoogleMozc */,
 			);
 		};
 /* End PBXProject section */
@@ -283,44 +348,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B47F3011F84D4DF004E45CD /* mac_process.mm in Sources */,
-				2B47F3241F84D53E004E45CD /* url.cc in Sources */,
-				2B4708DD1F84E21F004E45CD /* thread.cc in Sources */,
-				2B47F3151F84D53E004E45CD /* mac_util.mm in Sources */,
-				2B4708BD1F84E1DA004E45CD /* mmap.cc in Sources */,
 				2B47F2BE1F84D170004E45CD /* MozcEngine.mm in Sources */,
-				2B4708C31F84E1DA004E45CD /* scoped_handle.cc in Sources */,
-				2B4708BF1F84E1DA004E45CD /* mutex.cc in Sources */,
-				2B4708B91F84E1DA004E45CD /* hash.cc in Sources */,
-				2B4708D91F84E21F004E45CD /* system_util.cc in Sources */,
-				2B4708E31F84E21F004E45CD /* win_util.cc in Sources */,
-				2B4708E91F84FFC1004E45CD /* clock.cc in Sources */,
-				2B4708DB1F84E21F004E45CD /* text_normalizer.cc in Sources */,
-				2B47F2FC1F84D4DF004E45CD /* clock_mock.cc in Sources */,
-				2B47F31E1F84D53E004E45CD /* stopwatch.cc in Sources */,
-				2B47F3201F84D53E004E45CD /* unnamed_event.cc in Sources */,
-				2B47F3221F84D53E004E45CD /* update_util.cc in Sources */,
-				2B4708E11F84E21F004E45CD /* version.cc in Sources */,
-				2B4708DF1F84E21F004E45CD /* util.cc in Sources */,
-				2B47F31A1F84D53E004E45CD /* run_level.cc in Sources */,
-				2B4708D51F84E21F004E45CD /* singleton.cc in Sources */,
-				2B47F3161F84D53E004E45CD /* process_mutex.cc in Sources */,
-				2B4708D71F84E21F004E45CD /* string_piece.cc in Sources */,
-				2B47F3181F84D53E004E45CD /* process.cc in Sources */,
-				2B47F2FE1F84D4DF004E45CD /* cpu_stats.cc in Sources */,
 				2B47F2C21F84D1DA004E45CD /* MozcPrediction.m in Sources */,
-				2B4708B71F84E1DA004E45CD /* flags.cc in Sources */,
-				2B4708C11F84E1DA004E45CD /* number_util.cc in Sources */,
-				2B4708B31F84E1DA004E45CD /* file_stream.cc in Sources */,
-				2B4708B51F84E1DA004E45CD /* file_util.cc in Sources */,
-				2B4708BB1F84E1DA004E45CD /* logging.cc in Sources */,
-				2B4708B11F84E1DA004E45CD /* debug.cc in Sources */,
-				2B4708ED1F850010004E45CD /* japanese_util_rule.cc in Sources */,
-				2B47F31C1F84D53E004E45CD /* scheduler.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B84966B1F85EC610080EC7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B84967A1F85EC750080EC7E /* file_util.cc in Sources */,
+				2B84968F1F85EC7A0080EC7E /* mac_util.mm in Sources */,
+				2B84967B1F85EC750080EC7E /* flags.cc in Sources */,
+				2B8496911F85EC7A0080EC7E /* process.cc in Sources */,
+				2B8496861F85EC750080EC7E /* text_normalizer.cc in Sources */,
+				2B8496851F85EC750080EC7E /* system_util.cc in Sources */,
+				2B8496891F85EC750080EC7E /* version.cc in Sources */,
+				2B8496841F85EC750080EC7E /* string_piece.cc in Sources */,
+				2B8496871F85EC750080EC7E /* thread.cc in Sources */,
+				2B84968C1F85EC7A0080EC7E /* clock_mock.cc in Sources */,
+				2B84968D1F85EC7A0080EC7E /* cpu_stats.cc in Sources */,
+				2B8496951F85EC7A0080EC7E /* unnamed_event.cc in Sources */,
+				2B84967C1F85EC750080EC7E /* hash.cc in Sources */,
+				2B8496971F85EC7A0080EC7E /* url.cc in Sources */,
+				2B8496781F85EC750080EC7E /* debug.cc in Sources */,
+				2B8496941F85EC7A0080EC7E /* stopwatch.cc in Sources */,
+				2B8496921F85EC7A0080EC7E /* run_level.cc in Sources */,
+				2B84967E1F85EC750080EC7E /* logging.cc in Sources */,
+				2B8496901F85EC7A0080EC7E /* process_mutex.cc in Sources */,
+				2B84967D1F85EC750080EC7E /* japanese_util_rule.cc in Sources */,
+				2B8496811F85EC750080EC7E /* number_util.cc in Sources */,
+				2B84968B1F85EC7A0080EC7E /* clock.cc in Sources */,
+				2B84968A1F85EC750080EC7E /* win_util.cc in Sources */,
+				2B8496831F85EC750080EC7E /* singleton.cc in Sources */,
+				2B8496801F85EC750080EC7E /* mutex.cc in Sources */,
+				2B8496881F85EC750080EC7E /* util.cc in Sources */,
+				2B8496961F85EC7A0080EC7E /* update_util.cc in Sources */,
+				2B8496931F85EC7A0080EC7E /* scheduler.cc in Sources */,
+				2B84967F1F85EC750080EC7E /* mmap.cc in Sources */,
+				2B8496821F85EC750080EC7E /* scoped_handle.cc in Sources */,
+				2B8496791F85EC750080EC7E /* file_stream.cc in Sources */,
+				2B84968E1F85EC7A0080EC7E /* mac_process.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B8496991F85EC8B0080EC7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B84966E1F85EC610080EC7E /* GoogleMozc */;
+			targetProxy = 2B8496981F85EC8B0080EC7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2B47F2B61F84CD35004E45CD /* Debug */ = {
@@ -431,15 +511,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = OS_MACOSX;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../src";
 				INFOPLIST_FILE = Mozc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = (
-					"-include",
-					base/namespace.h,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = vn.gzr.Mozc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -458,19 +534,47 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = OS_MACOSX;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../src";
 				INFOPLIST_FILE = Mozc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = (
-					"-include",
-					base/namespace.h,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = vn.gzr.Mozc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2B8496751F85EC610080EC7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = OS_MACOSX;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../src";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				OTHER_CFLAGS = (
+					"-include",
+					base/namespace.h,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2B8496761F85EC610080EC7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = OS_MACOSX;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../src";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				OTHER_CFLAGS = (
+					"-include",
+					base/namespace.h,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -495,6 +599,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2B8496771F85EC610080EC7E /* Build configuration list for PBXNativeTarget "GoogleMozc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8496751F85EC610080EC7E /* Debug */,
+				2B8496761F85EC610080EC7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
