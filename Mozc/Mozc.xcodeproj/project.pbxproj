@@ -253,6 +253,11 @@
 		2B8498CA1F8639E30080EC7E /* user_dictionary_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498BE1F8639E30080EC7E /* user_dictionary_util.cc */; };
 		2B8498CB1F8639E30080EC7E /* user_dictionary.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498BF1F8639E30080EC7E /* user_dictionary.cc */; };
 		2B8498CC1F8639E30080EC7E /* user_pos.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8498C01F8639E30080EC7E /* user_pos.cc */; };
+		2B8499091F8647940080EC7E /* engine_builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499041F8647940080EC7E /* engine_builder.cc */; };
+		2B84990A1F8647940080EC7E /* engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499051F8647940080EC7E /* engine.cc */; };
+		2B84990B1F8647940080EC7E /* mock_converter_engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499061F8647940080EC7E /* mock_converter_engine.cc */; };
+		2B84990C1F8647940080EC7E /* mock_data_engine_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499071F8647940080EC7E /* mock_data_engine_factory.cc */; };
+		2B84990D1F8647940080EC7E /* user_data_manager_mock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499081F8647940080EC7E /* user_data_manager_mock.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -542,6 +547,11 @@
 		2B8498BE1F8639E30080EC7E /* user_dictionary_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_dictionary_util.cc; path = ../../src/dictionary/user_dictionary_util.cc; sourceTree = "<group>"; };
 		2B8498BF1F8639E30080EC7E /* user_dictionary.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_dictionary.cc; path = ../../src/dictionary/user_dictionary.cc; sourceTree = "<group>"; };
 		2B8498C01F8639E30080EC7E /* user_pos.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_pos.cc; path = ../../src/dictionary/user_pos.cc; sourceTree = "<group>"; };
+		2B8499041F8647940080EC7E /* engine_builder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = engine_builder.cc; path = ../../src/engine/engine_builder.cc; sourceTree = "<group>"; };
+		2B8499051F8647940080EC7E /* engine.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = engine.cc; path = ../../src/engine/engine.cc; sourceTree = "<group>"; };
+		2B8499061F8647940080EC7E /* mock_converter_engine.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mock_converter_engine.cc; path = ../../src/engine/mock_converter_engine.cc; sourceTree = "<group>"; };
+		2B8499071F8647940080EC7E /* mock_data_engine_factory.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mock_data_engine_factory.cc; path = ../../src/engine/mock_data_engine_factory.cc; sourceTree = "<group>"; };
+		2B8499081F8647940080EC7E /* user_data_manager_mock.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_data_manager_mock.cc; path = ../../src/engine/user_data_manager_mock.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -625,6 +635,7 @@
 				2B84986B1F8631FF0080EC7E /* converter */,
 				2B8498911F8636AE0080EC7E /* data_manager */,
 				2B8498B41F86399F0080EC7E /* dictionary */,
+				2B8498CD1F86471E0080EC7E /* engine */,
 			);
 			name = src;
 			path = ../Mozc;
@@ -1044,6 +1055,18 @@
 			name = dictionary;
 			sourceTree = "<group>";
 		};
+		2B8498CD1F86471E0080EC7E /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				2B8499041F8647940080EC7E /* engine_builder.cc */,
+				2B8499051F8647940080EC7E /* engine.cc */,
+				2B8499061F8647940080EC7E /* mock_converter_engine.cc */,
+				2B8499071F8647940080EC7E /* mock_data_engine_factory.cc */,
+				2B8499081F8647940080EC7E /* user_data_manager_mock.cc */,
+			);
+			name = engine;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1182,9 +1205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B84990D1F8647940080EC7E /* user_data_manager_mock.cc in Sources */,
 				2B8498891F8632460080EC7E /* segments.cc in Sources */,
+				2B8499091F8647940080EC7E /* engine_builder.cc in Sources */,
 				2B8498331F862DB30080EC7E /* mac_process.mm in Sources */,
+				2B84990C1F8647940080EC7E /* mock_data_engine_factory.cc in Sources */,
 				2B8498341F862DB30080EC7E /* mac_util.mm in Sources */,
+				2B84990A1F8647940080EC7E /* engine.cc in Sources */,
 				2B84984A1F862DB30080EC7E /* unverified_aes256.cc in Sources */,
 				2B8498821F8632460080EC7E /* immutable_converter.cc in Sources */,
 				2B84989A1F8636D50080EC7E /* dataset_reader.cc in Sources */,
@@ -1192,6 +1219,7 @@
 				2B8498561F862F390080EC7E /* stats_config_util.cc in Sources */,
 				2B84984E1F862DB30080EC7E /* util.cc in Sources */,
 				2B8498471F862DB30080EC7E /* text_normalizer.cc in Sources */,
+				2B84990B1F8647940080EC7E /* mock_converter_engine.cc in Sources */,
 				2B8498CA1F8639E30080EC7E /* user_dictionary_util.cc in Sources */,
 				2B84982D1F862DB30080EC7E /* file_util.cc in Sources */,
 				2B8498C21F8639E30080EC7E /* dictionary_mock.cc in Sources */,
