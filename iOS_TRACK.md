@@ -8,4 +8,6 @@
   - From **out_mac/Release/gen/proto_out/data_manager** into **data_manager**.
   - From **out_mac/Release/gen/proto_out/prediction** into **prediction**.
   - From **out_mac/Release/gen/proto_out/ipc** into **ipc**.
+  - From **out_mac/Release/gen/data_manager/oss** into **data_manager/oss**.
 - Comment out unavailable source code in **mac_process.mm**, **mac_util.mm**.
+- Copy **/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/include/crt_externs.h** to **/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/include/crt_externs.h** to build for device.

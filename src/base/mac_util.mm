@@ -138,7 +138,7 @@ string MacUtil::GetLabelForSuffix(const string &suffix) {
 }
 
 string MacUtil::GetApplicationSupportDirectory() {
-  return GetSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory);
+  return GetSearchPathForDirectoriesInDomains(NSCachesDirectory);
 }
 
 string MacUtil::GetCachesDirectory() {

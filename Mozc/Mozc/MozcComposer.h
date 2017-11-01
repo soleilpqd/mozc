@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+/// ObjC wrapper for `mozc::composer::Composer` with addtional functions from `mozc::ConvertInterface` for prediction
 @interface MozcComposer : NSObject
 
 @end

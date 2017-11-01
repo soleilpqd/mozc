@@ -111,7 +111,6 @@ class Engine : public EngineInterface {
     return data_manager_.get();
   }
 
- private:
   // Initializes the object by the given data manager and predictor factory
   // function.  Predictor factory is used to select DefaultPredictor and
   // MobilePredictor.
@@ -120,6 +119,7 @@ class Engine : public EngineInterface {
                                                      PredictorInterface *),
             bool enable_content_word_learning);
 
+private:
   std::unique_ptr<const DataManagerInterface> data_manager_;
   std::unique_ptr<const dictionary::POSMatcher> pos_matcher_;
   std::unique_ptr<dictionary::SuppressionDictionary> suppression_dictionary_;

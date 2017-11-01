@@ -1760,14 +1760,14 @@ bool Util::DeserializeUint64(StringPiece s, uint64 *x) {
   if (s.size() != 8) {
     return false;
   }
-  *x = static_cast<uint64>(s[0]) << 56 |
-       static_cast<uint64>(s[1]) << 48 |
-       static_cast<uint64>(s[2]) << 40 |
-       static_cast<uint64>(s[3]) << 32 |
-       static_cast<uint64>(s[4]) << 24 |
-       static_cast<uint64>(s[5]) << 16 |
-       static_cast<uint64>(s[6]) << 8 |
-       static_cast<uint64>(s[7]);
+  *x = static_cast<uint64>(s[0] & 0xFF) << 56 |
+       static_cast<uint64>(s[1] & 0xFF) << 48 |
+       static_cast<uint64>(s[2] & 0xFF) << 40 |
+       static_cast<uint64>(s[3] & 0xFF) << 32 |
+       static_cast<uint64>(s[4] & 0xFF) << 24 |
+       static_cast<uint64>(s[5] & 0xFF) << 16 |
+       static_cast<uint64>(s[6] & 0xFF) << 8 |
+       static_cast<uint64>(s[7] & 0xFF);
   return true;
 }
 

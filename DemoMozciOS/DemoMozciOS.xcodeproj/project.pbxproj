@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B6E3DB31F87332300E4A9F3 /* Mozc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B849A031F8665610080EC7E /* Mozc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B8499EB1F8664B30080EC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499EA1F8664B30080EC7E /* AppDelegate.swift */; };
 		2B8499ED1F8664B30080EC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499EC1F8664B30080EC7E /* ViewController.swift */; };
 		2B8499F01F8664B30080EC7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8499EE1F8664B30080EC7E /* Main.storyboard */; };
@@ -16,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2B6E3DB41F87332300E4A9F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B47F2AF1F84CD35004E45CD;
+			remoteInfo = Mozc;
+		};
 		2B849A021F8665610080EC7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */;
@@ -46,7 +54,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B6E3DB61F87332300E4A9F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B6E3DB31F87332300E4A9F3 /* Mozc.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2B6E3DB71F87342C00E4A9F3 /* FrameworkUsage.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FrameworkUsage.md; sourceTree = "<group>"; };
 		2B8499E71F8664B30080EC7E /* DemoMozciOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoMozciOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8499EA1F8664B30080EC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8499EC1F8664B30080EC7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +95,7 @@
 		2B8499DE1F8664B30080EC7E = {
 			isa = PBXGroup;
 			children = (
+				2B6E3DB71F87342C00E4A9F3 /* FrameworkUsage.md */,
 				2B8499FC1F8665610080EC7E /* Mozc.xcodeproj */,
 				2B8499E91F8664B30080EC7E /* DemoMozciOS */,
 				2B8499E81F8664B30080EC7E /* Products */,
@@ -119,11 +143,13 @@
 				2B8499E31F8664B30080EC7E /* Sources */,
 				2B8499E41F8664B30080EC7E /* Frameworks */,
 				2B8499E51F8664B30080EC7E /* Resources */,
+				2B6E3DB61F87332300E4A9F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2B849A091F86656B0080EC7E /* PBXTargetDependency */,
+				2B6E3DB51F87332300E4A9F3 /* PBXTargetDependency */,
 			);
 			name = DemoMozciOS;
 			productName = DemoMozciOS;
@@ -142,6 +168,7 @@
 				TargetAttributes = {
 					2B8499E61F8664B30080EC7E = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = P82S49663G;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -220,6 +247,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2B6E3DB51F87332300E4A9F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mozc;
+			targetProxy = 2B6E3DB41F87332300E4A9F3 /* PBXContainerItemProxy */;
+		};
 		2B849A091F86656B0080EC7E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Mozc;
@@ -344,13 +376,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tau Ngo Van (7D7S35JN42)";
+				DEVELOPMENT_TEAM = P82S49663G;
 				INFOPLIST_FILE = DemoMozciOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.gzr.DemoMozciOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "82bab5f6-338d-4a33-bc3e-453072d0c6c0";
+				PROVISIONING_PROFILE_SPECIFIER = "Run Enterprise In house DEV Profile";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -358,13 +393,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tau Ngo Van (7D7S35JN42)";
+				DEVELOPMENT_TEAM = P82S49663G;
 				INFOPLIST_FILE = DemoMozciOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.gzr.DemoMozciOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "82bab5f6-338d-4a33-bc3e-453072d0c6c0";
+				PROVISIONING_PROFILE_SPECIFIER = "Run Enterprise In house DEV Profile";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -387,6 +425,7 @@
 				2B8499FB1F8664B30080EC7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
